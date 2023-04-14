@@ -6,3 +6,44 @@
   padding: 0;
   font-family: $base-font-family;
 }
+
+body {
+  background-color: $background-black;
+}
+
+.Logo {
+  @include Logo;
+}
+
+.Catalogue-main {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Catalogue-card {
+  height: 200px;
+  width: 100px;
+  // border: 2px $white solid;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.Card-img {
+  width: 96px;
+  height: 160px;
+  border-radius: 16px;
+  // border: 2px $white solid;
+}
+
+.Card-title {
+  margin-top: 3px;
+  color: $white;
+  font-size: 12px;
+  text-align: center;
+  margin: 3px;
+  border: 2px $white solid;
+  padding: 5px;
+}

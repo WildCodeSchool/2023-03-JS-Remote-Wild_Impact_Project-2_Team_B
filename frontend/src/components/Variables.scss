@@ -1,12 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Jockey+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap%27");
 
 $background-black: #0b1219;
-$background-grey: #939393;
+$background-grey: #6b6b6b;
 $background-light-grey: #d9d9d9;
 $white: #ffffff;
 $red: #e95e50;
 $purple: #6f1065;
 $blue: #1ea096;
+$logo-red: #a81f11;
+$logo-grey: #e6d6d4;
 
 $title-font-family: "Jockey One", sans-serif;
 $base-font-family: "Lato", sans-serif;
+
+@mixin Logo {
+  font-size: 55px;
+  font-family: $title-font-family;
+  color: $logo-grey;
+  padding: 10px;
+  text-align: center;
+  -webkit-text-stroke: 1px $logo-red;
+  letter-spacing: 1.5px;
+}
