@@ -5,8 +5,8 @@
 // US 3 import
 
 // US 4 import
-
-import "./App.scss";
+import Contact from './pages/Contact'
+import "./App.scss"
 
 function App() {
   return (
@@ -18,7 +18,9 @@ function App() {
       {/** US 3 Page */}
 
       {/** US 4 Page */}
+      <Contact />
     </div>
+
   );
 }
 

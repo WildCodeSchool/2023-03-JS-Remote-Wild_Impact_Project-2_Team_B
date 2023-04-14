@@ -6,3 +6,186 @@
   padding: 0;
   font-family: $base-font-family;
 }
+
+body {
+  background-color: $background-black;
+}
+
+/* CONTACT FORM */
+.contacttitle {
+  color: $background-light-grey;
+  text-align: center;
+  display: block;
+  margin: 2rem;
+  font-family: $title-font-family;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.8rem;
+}
+
+label {
+  color: $background-light-grey;
+  text-align: left;
+  display: block;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: $title-font-family;
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+
+.container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ContactForm {
+  max-width: 400px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /*   z-index: 1; 
+  animation: bounce 1.5s infinite;*/
+}
+
+::-webkit-input-placeholder {
+  font-size: 1.3em;
+}
+
+
+.animated {
+  background-color: $background-light-grey;
+  color: $background-black;
+  margin-top: 0px;
+  ;
+}
+
+
+.animated:hover {
+  border-bottom: 5px solid $blue;
+  height: 40px;
+  width: 340px;
+  transition: ease 0.5s;
+}
+
+
+.message {
+  background-color: $background-light-grey;
+  overflow: hidden;
+  height: 10rem;
+}
+
+.message:hover {
+  border-bottom: 5px solid $blue;
+  height: 15em;
+  width: 340px;
+  transition: ease 0.5s;
+}
+
+.formEntry {
+  display: block;
+  margin: 1.5rem auto;
+  min-width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.5s ease 0s;
+  margin-top: 0.5rem;
+}
+
+.submit {
+  display: block;
+  margin: 1.5rem auto;
+  padding: 10px;
+  border-radius: 40px;
+  color: $blue;
+  border: 1px solid $blue;
+  background: none !important;
+  margin-top: 0.5rem;
+  font-family: $title-font-family;
+  font-size: 1.5rem;
+  line-height: 1;
+  min-width: 200px;
+  height: 60px;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 2px;
+  transition: all .3s ease;
+}
+
+
+button:hover {
+  background-color: $blue;
+  color: $white;
+  letter-spacing: 5px;
+  transition: all .3s ease;
+  border: 3px dashed $white;
+}
+
+
+
+/* TEXTE DEFILANT */
+.messagedefilant {
+  margin-top: 30px;
+  display: block;
+  margin: auto auto;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 40px;
+  background-color: $background-light-grey;
+  transform: rotate(-3deg);
+  top: 20%;
+  margin-top: 5rem;
+}
+
+.messagedefilant div {
+  top: 10%;
+  position: absolute;
+  min-width: 100%;
+  /* au minimum la largeur du conteneur */
+}
+
+.messagedefilant div p,
+.messagedefilant div:after {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  white-space: nowrap;
+  top: 0;
+  font-family: $title-font-family;
+  font-weight: 600;
+  line-height: 1;
+}
+
+
+.messagedefilant div>p {
+  animation: defilement 25s infinite linear;
+  display: inline;
+}
+
+
+.puce {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  color: $red;
+  font-size: 35px;
+}
+
+@keyframes defilement {
+  0% {
+    margin-left: 50%;
+  }
+
+  100% {
+    margin-left: -50%;
+  }
+}
