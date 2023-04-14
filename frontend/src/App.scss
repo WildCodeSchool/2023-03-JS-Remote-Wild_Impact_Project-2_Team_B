@@ -6,3 +6,30 @@
   padding: 0;
   font-family: $base-font-family;
 }
+
+.containerCard {
+  display: flex;
+  padding: 2rem;
+  background-color: $background-light-grey;
+}
+
+.imgSection {
+  width: 40%;
+  height: auto;
+  margin-right: 2rem;
+}
+
+.imgSection img {
+  border-radius: 5%;
+}
+
+.specSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.specElement {
+  padding: 0.5rem;
+}
