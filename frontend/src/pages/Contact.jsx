@@ -1,74 +1,148 @@
 import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser'
-
-
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    user_firstName: "",
+    user_lastName: "",
+    user_email: "",
+    user_message: "",
+  });
   const form = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault(); emailjs.sendForm(process.env.REACT_APP_SERVICE_ID,
-      process.env.REACT_APP_TEMPLATE_ID, form.current,
-      process.env.REACT_APP_PUBLIC_KEY)
-      .then((result) => { alert('message sent successfully...'); console.log(result.text); },
-        (error) => { console.log(error.text); });
+  const [formError, setFormError] = useState({});
+  const onChangeHandler = (event) => {
+    setFormData(() => ({
+      ...formData,
+      [event.target.name]: event.target.value
+    }));
   };
 
+  /* VALIDATION FORM */
+  const validateForm = () => {
+    let err = {};
+    let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (formData.user_firstName === '') {
+      err.user_firstName = 'Il manque votre prenom!';
+    }
+    if (formData.user_lastName === '') {
+      err.user_lastName = 'Il manque votre nom!';
+    }
+    if (!regex.test(formData.user_email)) {
+      err.user_email = 'Pas de message sans votre email!';
+    } else {
+      if (!regex.test(formData.user_email)) {
+        err.user_email = 'Votre email est bizzare...';
+      }
+    }
+    setFormError({ ...err });
+    return Object.keys(err).length < 1;
+  };
 
+  /* SEND FORM */
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log("Form Data:", formData);
+    let isValid = validateForm();
+    if (isValid) {
+      emailjs.sendForm('service_dbwxt5z', 'Template_narval01', form.current, 'D_XtUCzs448Q6k9Ym')
+        .then((result) => {
+          console.log(result.text);
+          alert("Merci pour le message ! Les Superheros sont à votre disoposition !");
+        }, (error) => {
+          console.log(error.text);
+          alert("Il y a un problème...");
+        });
+    } else {
+      alert("Vous avez besoin des superpower pour remplir le forumulaire ? Essayez encore une fois!");
+    }
+  };
+  /* FORM HTML */
   return (
     <div>
       <div className="container-form">
-        <h1 className='contacttitle'>Contactez nous</h1>
+        <h1 className="logo">narvel</h1>
+        <div className='anim-mail'>
+          <div class="letter-image">
+            <div class="animated-mail">
+              <div class="back-fold"></div>
+              <div class="letter">
+                <div class="letter-border"></div>
+                <div class="letter-title"></div>
+                <div class="letter-context"></div>
+                <div class="letter-N">N</div>
+                <div class="letter-stamp">
+                  <div class="letter-stamp-inner"></div>
+                </div>
+              </div>
+              <div class="top-fold"></div>
+              <div class="body"></div>
+              <div class="left-fold"></div>
+            </div>
+          </div>
+        </div>
+        <h1 className="contactTitle">Contactez nous</h1>
         <form className="ContactForm" ref={form} onSubmit={sendEmail}>
-          <label htmlFor="firstName">Prénom</label>
+          <label className="LabelForm">Prénom</label>
           <input
-            name='user_firstName'
+            name="user_firstName"
             type="text"
             id="firstName"
             className="firstname formEntry animated"
             placeholder="Prenom"
+            value={formData.user_firstName}
+            onChange={onChangeHandler}
           />
-          <label htmlFor="lastName">Nom</label>
+          <span className="non-valid">{formError.user_firstName}</span>
+          <label className="LabelForm">Nom</label>
           <input
-            name='user_lastName'
+            name="user_lastName"
             type="text"
             id="lastName"
             className="name formEntry animated"
             placeholder="Nom"
+            value={formData.user_lastName}
+            onChange={onChangeHandler}
           />
-          <label htmlFor="Email">Adresse mail</label>
+          <span className="non-valid">{formError.user_lastName}</span>
+          <label className="LabelForm">Adresse mail</label>
           <input
-            name='user_email'
+            name="user_email"
             type="text"
             id="email"
             className="email formEntry animated"
             placeholder="Email"
+            value={formData.user_email}
+            onChange={onChangeHandler}
           />
-          <label htmlFor="Message">Message</label>
+          <span className="non-valid">{formError.user_email}</span>
+          <label className="LabelForm">Message</label>
           <textarea
-            name='umessage'
+            name="user_message"
             id="message"
             className="message formEntry"
             placeholder="Votre message"
+            value={formData.user_message}
+            onChange={onChangeHandler}
           ></textarea>
+          <span className="non-valid">{formError.user_message}</span>
           <br />
-          <button type="submit" className="submit" onClick={() => {
-            alert("Message Sent.");
-          }}>
+          <button type="submit" className="submit" value="Send Email">
             Envoyer
           </button>
 
         </form>
       </div>
-      <div class="messagedefilant">
+      <div className="messagedefilant">
 
         <div>
-          <p> <span class="puce">•</span> HIRE SUPERHERO<span class="puce">•</span> HIRE SUPERHERO <span
-            class="puce">•</span>
-            HIRE SUPERHERO<span class="puce">•</span> HIRE SUPERHERO
-            <span class="puce">•</span> HIRE SUPERHERO<span class="puce">•</span> HIRE SUPERHERO
-            <span class="puce">•</span> HIRE SUPERHERO <span class="puce">•</span> HIRE SUPERHERO<span class="puce">•</span>
+          <p> <span className="puce">•</span> HIRE SUPERHERO<span className="puce">•</span> HIRE SUPERHERO <span
+            className="puce">•</span>
+            HIRE SUPERHERO<span className="puce">•</span> HIRE SUPERHERO
+            <span className="puce">•</span> HIRE SUPERHERO<span className="puce">•</span> HIRE SUPERHERO
+            <span className="puce">•</span> HIRE SUPERHERO <span className="puce">•</span> HIRE SUPERHERO<span className="puce">•</span>
             HIRE SUPERHERO
-            <span class="puce">•</span> HIRE SUPERHERO
+            <span className="puce">•</span> HIRE SUPERHERO
           </p>
 
         </div>

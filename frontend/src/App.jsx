@@ -7,6 +7,7 @@
 // US 4 import
 import Contact from './pages/Contact'
 import "./App.scss"
+import emailjs from '@emailjs/browser'
 
 function App() {
   return (
