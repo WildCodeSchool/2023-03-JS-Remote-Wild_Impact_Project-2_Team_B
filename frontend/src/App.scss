@@ -77,6 +77,7 @@
 @media screen and (max-width: 834px) {
   .descSection {
     align-items: center;
+    text-align: center;
   }
 }
 
@@ -126,6 +127,11 @@
 .buttonSection button {
   padding: 0.5rem;
   font-size: 1.2rem;
+  @include mainBtn($blue);
+}
+
+.buttonSection button:hover {
+  @include mainBtnHover($white);
 }
 
 // --- statisticsGraph ---

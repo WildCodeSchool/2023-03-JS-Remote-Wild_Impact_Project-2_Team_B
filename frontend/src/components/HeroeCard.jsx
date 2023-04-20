@@ -26,15 +26,14 @@ function HeroeCard({ Heroes }) {
         </section>
         <section className="statSection">
           <h3>Statistics</h3>
-
-          {/* <ul>
+          <ul>
             <li>Intelligence : {Heroes[0].intelligence} </li>
             <li>Strength : {Heroes[0].strength}</li>
             <li>Speed : {Heroes[0].speed}</li>
             <li>Durability : {Heroes[0].durability}</li>
             <li>Power : {Heroes[0].power}</li>
             <li>Combat : {Heroes[0].combat}</li>
-          </ul> */}
+          </ul>
         </section>
         <section className="buttonSection">
           <button type="button">Louer mon super héros</button>
