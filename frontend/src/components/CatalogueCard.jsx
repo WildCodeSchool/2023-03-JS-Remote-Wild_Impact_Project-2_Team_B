@@ -5,11 +5,11 @@ function CatalogueCard({ Heroe }) {
   return (
     <div className="Catalogue-card">
       <img
-        className="Card-img"
+        className="Catalogue-card-img"
         src={Heroe.image_sm}
         alt="illustration représentant les super héroes."
       />
-      <h1 className="Card-title">{Heroe.name}</h1>
+      <h1 className="Catalogue-card-title">{Heroe.name}</h1>
     </div>
   );
 }
