@@ -13,7 +13,9 @@ body {
 }
 
 .Logo {
-  @include Logo;
+  @include logo(55px);
+  text-align: center;
+  margin: 20px 0 40px 0;
 }
 
 .Catalogue-main {
@@ -86,4 +88,18 @@ body {
 }
 .Panier-card-count p {
   text-align: center;
+}
+
+.Panier-total {
+  background-color: $background-grey;
+  margin: 13px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.Panier-total button {
+  @include mainBtn($white);
 }

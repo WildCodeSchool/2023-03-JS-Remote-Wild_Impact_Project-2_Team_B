@@ -2,8 +2,7 @@ import React from "react";
 import PanierCard from "@components/PanierCard";
 
 function Panier({ Heroes }) {
-  console.log("Initialisation de la page Panier");
-
+  const nmbHeroes = Heroes.length;
   return (
     <div>
       <h1 className="Logo">NARVEL</h1>
@@ -11,6 +10,11 @@ function Panier({ Heroes }) {
       {Heroes.slice(0, 5).map((Heroe) => (
         <PanierCard key={Heroe.id} Heroe={Heroe} />
       ))}
+
+      <div className="Panier-total">
+        <h3>Total : {nmbHeroes * 500} $</h3>
+        <button type="button">Paiement</button>
+      </div>
     </div>
   );
 }

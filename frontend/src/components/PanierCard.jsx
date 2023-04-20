@@ -11,7 +11,7 @@ function PanierCard({ Heroe }) {
           <p>{Heroe.name}</p>
         </li>
         <li>
-          <p>Ici une corbeille quand j'aurais trouver les icones</p>
+          <p>icone poubelle ici</p>
         </li>
       </ul>
     </div>
