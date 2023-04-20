@@ -5,7 +5,7 @@
 // US 3 import
 
 // US 4 import
-
+import Footer from "./pages/Footer";
 import "./App.scss";
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
       {/** US 3 Page */}
 
       {/** US 4 Page */}
+      <Footer />
     </div>
   );
 }
