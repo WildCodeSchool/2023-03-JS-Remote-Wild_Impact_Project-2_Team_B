@@ -7,7 +7,7 @@ import React from "react";
 import HeroeCard from "./components/HeroeCard";
 import { Heroes } from "./assets/data";
 // US 4 import
-import Contact from "./pages/contact";
+import Contact from "./pages/Contact";
 import "./App.scss";
 
 function App() {
