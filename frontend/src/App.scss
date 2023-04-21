@@ -7,10 +7,11 @@
   font-family: $base-font-family;
 }
 
+
 body {
   background-color: $background-black;
   color: $white;
-}
+  }
 
 /* TITLE */
 .contactTitle {
@@ -380,3 +381,129 @@ button.submit:hover {
     margin-left: -50%;
   }
 }
+=======
+@media screen and (max-width: 834px) {
+  .containerCard {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// ---------------- img ----------------
+.imgSection {
+  width: 40%;
+  height: auto;
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.imgSection img {
+  border-radius: 5%;
+}
+
+@media screen and (max-width: 834px) {
+  .imgSection {
+    margin-right: 0px;
+    width: 80%;
+  }
+
+  .imgSection img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 0px;
+    margin: auto;
+  }
+}
+// ---------------- === HEROECARD === ----------------
+.containerCard {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+// ---------------- description ----------------
+.descSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.descSection h2 {
+  color: $blue;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+.descElement {
+  padding: 0.2rem;
+}
+
+.descSection h3 {
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 834px) {
+  .descSection {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+// ---------------- statistics ----------------
+.statSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.statSection h3 {
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+  margin-top: 1rem;
+}
+
+.statSection ul {
+  list-style: none;
+}
+
+.statSection li::before {
+  content: "•";
+  color: $blue;
+  display: inline-block;
+  width: 1em;
+  margin-left: -0.5em;
+}
+
+.statSection li {
+  margin: 0.3rem;
+}
+
+@media screen and (max-width: 834px) {
+  .statSection {
+    align-items: center;
+  }
+}
+
+// ---------------- button ----------------
+.buttonSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+
+.buttonSection button {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  @include mainBtn($blue);
+}
+
+.buttonSection button:hover {
+  @include mainBtnHover($white);
+}
+
+// --- statisticsGraph ---
