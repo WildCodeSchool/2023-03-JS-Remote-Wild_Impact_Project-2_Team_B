@@ -12,7 +12,9 @@ body {
 }
 
 .Logo {
-  @include Logo;
+  @include logo(55px);
+  text-align: center;
+  margin: 40px 0 40px 0;
 }
 
 .Catalogue-main {
@@ -48,4 +50,29 @@ body {
   font-size: 12px;
   text-align: center;
   margin: 5px 2px 0 2px;
+}
+
+@media only screen and (min-width: 768px) {
+  .Catalogue-main {
+    gap: 50px;
+    margin: 70px 20px 0 20px;
+  }
+
+  .Logo {
+    @include logo(70px);
+    margin-top: 40px;
+  }
+
+  .Catalogue-card {
+    height: 240px;
+    width: 135px;
+  }
+
+  .Card-img {
+    height: 190px;
+  }
+
+  .Card-title {
+    margin: 12px 2px 0 2px;
+  }
 }

@@ -7,7 +7,7 @@ function Catalogue({ Heroes }) {
     <div>
       <h1 className="Logo">NARVEL</h1>
       <div className="Catalogue-main">
-        {Heroes.map((Heroe) => (
+        {Heroes.slice(0, 30).map((Heroe) => (
           <CatalogueCard key={Heroe.id} Heroe={Heroe} />
         ))}
       </div>
