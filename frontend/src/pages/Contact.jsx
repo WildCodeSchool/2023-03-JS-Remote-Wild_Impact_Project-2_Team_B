@@ -47,15 +47,18 @@ function Contact() {
           "D_XtUCzs448Q6k9Ym"
         )
         .then(() => {
+          // eslint-disable-next-line no-alert
           alert(
             "Merci pour le message ! Les Superheros sont à votre disoposition !"
           );
         })
 
         .catch(() => {
+          // eslint-disable-next-line no-alert
           alert("Il y a un problème...");
         });
     } else {
+      // eslint-disable-next-line no-alert
       alert(
         "Vous avez besoin des superpower pour remplir le forumulaire ? Essayez encore une fois!"
       );

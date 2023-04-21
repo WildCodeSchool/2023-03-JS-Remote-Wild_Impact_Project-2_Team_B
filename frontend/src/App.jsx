@@ -6,7 +6,7 @@ import React from "react";
 // US 3 import
 
 // US 4 import
-import Contact from "./pages/contact";
+import Contact from "./pages/Contact";
 import "./App.scss";
 
 function App() {
