@@ -5,7 +5,6 @@ ul {
   padding-inline-start: 0px;
 }
 
-
 body {
   background-color: black;
   color: white;
@@ -34,18 +33,18 @@ body {
   width: 30%;
   display: inline-block;
   text-align: center;
-  }
+}
 
 button.footer-button {
   @include mainBtn($white);
 }
 
-button.footer-button:hover{
+button.footer-button:hover {
   @include mainBtnHover($blue);
 }
 
-.footer-logo{
-  @include logo(10px); 
+.footer-logo {
+  @include logo(10px);
 }
 .row1 {
   width: 80%;
@@ -64,24 +63,30 @@ button.footer-button:hover{
     margin-left: auto;
     margin-right: auto;
     align-items: center;
-} 
-.footer-title {
-  display: none;
+  }
+  .footer-title {
+    display: none;
+  }
+  .list-unstyled {
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer-item {
+    display: inline-block;
+  }
+  .footer-column1 {
+    width: 80%;
+  }
 }
-.list-unstyled{
-  display: flex;
-  justify-content: space-around;
-}
-.footer-item {
-  display: inline-block;
-}
-.footer-column1 {
-  width: 80%;
-}
-} 
 .row2 {
+  // width: 80%;
+  // display: inline-block;
   width: 80%;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container {
   min-height: 100%;
