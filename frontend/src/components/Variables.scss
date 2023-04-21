@@ -7,15 +7,13 @@ $white: #ffffff;
 $red: #e95e50;
 $purple: #6f1065;
 $blue: #1ea096;
-$logo-red: #A81F11;
-$logo-grey: #E6D6D4;
-
+$logo-red: #a81f11;
+$logo-grey: #e6d6d4;
 
 /* FONTS*/
 
 $title-font-family: "Jockey One", sans-serif;
 $base-font-family: "Lato", sans-serif;
-
 
 /* TEXT*/
 @mixin mainTitle {
@@ -28,8 +26,6 @@ $base-font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 2.8rem;
 }
-
-
 
 /* BUTTON */
 @mixin mainBtn($color) {
@@ -45,23 +41,23 @@ $base-font-family: "Lato", sans-serif;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 @mixin mainBtnHover($color-hover) {
   color: $color-hover;
   letter-spacing: 0.3rem;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   border: 3px dashed;
   border-color: $color-hover;
   line-height: 1;
 }
 
-@mixin logo ($font-size) {
-  color: #E6D6D4;
-  -webkit-text-fill-color: #E6D6D4;
+@mixin logo($font-size) {
+  color: #e6d6d4;
+  -webkit-text-fill-color: #e6d6d4;
   letter-spacing: 0rem;
-  -webkit-text-stroke: 0.10rem #A81F11;
+  -webkit-text-stroke: 0.1rem #a81f11;
   line-height: 1;
   text-transform: uppercase;
   font-family: $title-font-family;

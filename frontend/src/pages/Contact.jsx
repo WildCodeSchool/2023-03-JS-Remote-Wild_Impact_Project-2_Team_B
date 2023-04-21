@@ -1,8 +1,7 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import { useState } from 'react';
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
-const Contact = () => {
+function Contact() {
   const [formData, setFormData] = useState({
     user_firstName: "",
     user_lastName: "",
@@ -14,26 +13,24 @@ const Contact = () => {
   const onChangeHandler = (event) => {
     setFormData(() => ({
       ...formData,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     }));
   };
 
   /* VALIDATION FORM */
   const validateForm = () => {
-    let err = {};
-    let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (formData.user_firstName === '') {
-      err.user_firstName = 'Il manque votre prenom!';
+    const err = {};
+    const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (formData.user_firstName === "") {
+      err.user_firstName = "Il manque votre prenom!";
     }
-    if (formData.user_lastName === '') {
-      err.user_lastName = 'Il manque votre nom!';
+    if (formData.user_lastName === "") {
+      err.user_lastName = "Il manque votre nom!";
     }
     if (!regex.test(formData.user_email)) {
-      err.user_email = 'Pas de message sans votre email!';
-    } else {
-      if (!regex.test(formData.user_email)) {
-        err.user_email = 'Votre email est bizzare...';
-      }
+      err.user_email = "Pas de message sans votre email!";
+    } else if (!regex.test(formData.user_email)) {
+      err.user_email = "Votre email est bizzare...";
     }
     setFormError({ ...err });
     return Object.keys(err).length < 1;
@@ -43,18 +40,31 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     console.log("Form Data:", formData);
-    let isValid = validateForm();
+    const isValid = validateForm();
     if (isValid) {
-      emailjs.sendForm('service_dbwxt5z', 'Template_narval01', form.current, 'D_XtUCzs448Q6k9Ym')
-        .then((result) => {
-          console.log(result.text);
-          alert("Merci pour le message ! Les Superheros sont à votre disoposition !");
-        }, (error) => {
-          console.log(error.text);
-          alert("Il y a un problème...");
-        });
+      emailjs
+        .sendForm(
+          "service_dbwxt5z",
+          "Template_narval01",
+          form.current,
+          "D_XtUCzs448Q6k9Ym"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            alert(
+              "Merci pour le message ! Les Superheros sont à votre disoposition !"
+            );
+          },
+          (error) => {
+            console.log(error.text);
+            alert("Il y a un problème...");
+          }
+        );
     } else {
-      alert("Vous avez besoin des superpower pour remplir le forumulaire ? Essayez encore une fois!");
+      alert(
+        "Vous avez besoin des superpower pour remplir le forumulaire ? Essayez encore une fois!"
+      );
     }
   };
   /* FORM HTML */
@@ -62,22 +72,22 @@ const Contact = () => {
     <div>
       <div className="container-form">
         <h1 className="logo">narvel</h1>
-        <div className='anim-mail'>
-          <div class="letter-image">
-            <div class="animated-mail">
-              <div class="back-fold"></div>
-              <div class="letter">
-                <div class="letter-border"></div>
-                <div class="letter-title"></div>
-                <div class="letter-context"></div>
-                <div class="letter-N">N</div>
-                <div class="letter-stamp">
-                  <div class="letter-stamp-inner"></div>
+        <div className="anim-mail">
+          <div className="letter-image">
+            <div className="animated-mail">
+              <div className="back-fold" />
+              <div className="letter">
+                <div className="letter-border" />
+                <div className="letter-title" />
+                <div className="letter-context" />
+                <div className="letter-N">N</div>
+                <div className="letter-stamp">
+                  <div className="letter-stamp-inner" />
                 </div>
               </div>
-              <div class="top-fold"></div>
-              <div class="body"></div>
-              <div class="left-fold"></div>
+              <div className="top-fold" />
+              <div className="body" />
+              <div className="left-fold" />
             </div>
           </div>
         </div>
@@ -124,31 +134,34 @@ const Contact = () => {
             placeholder="Votre message"
             value={formData.user_message}
             onChange={onChangeHandler}
-          ></textarea>
+          />
           <span className="non-valid">{formError.user_message}</span>
           <br />
           <button type="submit" className="submit" value="Send Email">
             Envoyer
           </button>
-
         </form>
       </div>
       <div className="messagedefilant">
-
         <div>
-          <p> <span className="puce">•</span> HIRE SUPERHERO<span className="puce">•</span> HIRE SUPERHERO <span
-            className="puce">•</span>
+          <p>
+            {" "}
+            <span className="puce">•</span> HIRE SUPERHERO
+            <span className="puce">•</span> HIRE SUPERHERO{" "}
+            <span className="puce">•</span>
             HIRE SUPERHERO<span className="puce">•</span> HIRE SUPERHERO
-            <span className="puce">•</span> HIRE SUPERHERO<span className="puce">•</span> HIRE SUPERHERO
-            <span className="puce">•</span> HIRE SUPERHERO <span className="puce">•</span> HIRE SUPERHERO<span className="puce">•</span>
+            <span className="puce">•</span> HIRE SUPERHERO
+            <span className="puce">•</span> HIRE SUPERHERO
+            <span className="puce">•</span> HIRE SUPERHERO{" "}
+            <span className="puce">•</span> HIRE SUPERHERO
+            <span className="puce">•</span>
             HIRE SUPERHERO
             <span className="puce">•</span> HIRE SUPERHERO
           </p>
-
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Contact;

@@ -5,9 +5,9 @@
 // US 3 import
 
 // US 4 import
-import Contact from './pages/Contact'
-import "./App.scss"
-import emailjs from '@emailjs/browser'
+import Contact from "./pages/Contact";
+import "./App.scss";
+import emailjs from "@emailjs/browser";
 
 function App() {
   return (
@@ -21,7 +21,6 @@ function App() {
       {/** US 4 Page */}
       <Contact />
     </div>
-
   );
 }
 
