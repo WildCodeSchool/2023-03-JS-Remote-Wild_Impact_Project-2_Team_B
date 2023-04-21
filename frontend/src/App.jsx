@@ -23,13 +23,13 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/catalogue" element={<Catalogue />} />
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/catalogue" element={<Catalogue />} /> */}
           <Route
             path="/heroes/:heroenumber"
             element={<HeroeCard Heroes={Heroes} />}
           />
-          <Route path="/contact" element={<Contact />} />
+          {/* <Route path="/contact" element={<Contact />} /> */}
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>
