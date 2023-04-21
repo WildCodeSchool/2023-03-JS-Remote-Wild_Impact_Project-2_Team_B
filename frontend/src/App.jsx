@@ -4,7 +4,8 @@
 // import Catalogue from "./pages/Catalogue";
 import Panier from "./pages/Panier";
 // US 3 import
-
+import HeroeCard from "./components/HeroeCard";
+import { Heroes } from "./assets/data";
 // US 4 import
 
 import "./App.scss";
@@ -19,7 +20,7 @@ function App() {
       {/* <Catalogue Heroes={Heroes} /> */}
       <Panier Heroes={Heroes} />
       {/** US 3 Page */}
-
+      <HeroeCard Heroes={Heroes} />
       {/** US 4 Page */}
     </div>
   );
