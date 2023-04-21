@@ -1,13 +1,13 @@
 // US 1 import
+import React from "react";
 
 // US 2 Import
 
 // US 3 import
 
 // US 4 import
-import Contact from "./pages/Contact";
+import Contact from "./pages/contact";
 import "./App.scss";
-import emailjs from "@emailjs/browser";
 
 function App() {
   return (
@@ -19,8 +19,6 @@ function App() {
       {/** US 3 Page */}
 
       {/** US 4 Page */}
-
-      /** CONTACT FORM */
       <Contact />
     </div>
   );

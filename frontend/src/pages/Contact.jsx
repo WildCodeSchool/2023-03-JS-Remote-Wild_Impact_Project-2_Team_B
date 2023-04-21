@@ -20,7 +20,7 @@ function Contact() {
   /* VALIDATION FORM */
   const validateForm = () => {
     const err = {};
-    const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
     if (formData.user_firstName === "") {
       err.user_firstName = "Il manque votre prenom!";
     }
@@ -29,8 +29,6 @@ function Contact() {
     }
     if (!regex.test(formData.user_email)) {
       err.user_email = "Pas de message sans votre email!";
-    } else if (!regex.test(formData.user_email)) {
-      err.user_email = "Votre email est bizzare...";
     }
     setFormError({ ...err });
     return Object.keys(err).length < 1;
@@ -39,7 +37,6 @@ function Contact() {
   /* SEND FORM */
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
     const isValid = validateForm();
     if (isValid) {
       emailjs
@@ -49,18 +46,15 @@ function Contact() {
           form.current,
           "D_XtUCzs448Q6k9Ym"
         )
-        .then(
-          (result) => {
-            console.log(result.text);
-            alert(
-              "Merci pour le message ! Les Superheros sont à votre disoposition !"
-            );
-          },
-          (error) => {
-            console.log(error.text);
-            alert("Il y a un problème...");
-          }
-        );
+        .then(() => {
+          alert(
+            "Merci pour le message ! Les Superheros sont à votre disoposition !"
+          );
+        })
+
+        .catch(() => {
+          alert("Il y a un problème...");
+        });
     } else {
       alert(
         "Vous avez besoin des superpower pour remplir le forumulaire ? Essayez encore une fois!"
@@ -93,48 +87,56 @@ function Contact() {
         </div>
         <h1 className="contactTitle">Contactez nous</h1>
         <form className="ContactForm" ref={form} onSubmit={sendEmail}>
-          <label className="LabelForm">Prénom</label>
-          <input
-            name="user_firstName"
-            type="text"
-            id="firstName"
-            className="firstname formEntry animated"
-            placeholder="Prenom"
-            value={formData.user_firstName}
-            onChange={onChangeHandler}
-          />
+          <label className="LabelForm">
+            Prénom
+            <input
+              name="user_firstName"
+              type="text"
+              id="firstName"
+              className="firstname formEntry animated"
+              placeholder="Prenom"
+              value={formData.user_firstName}
+              onChange={onChangeHandler}
+            />
+          </label>
           <span className="non-valid">{formError.user_firstName}</span>
-          <label className="LabelForm">Nom</label>
-          <input
-            name="user_lastName"
-            type="text"
-            id="lastName"
-            className="name formEntry animated"
-            placeholder="Nom"
-            value={formData.user_lastName}
-            onChange={onChangeHandler}
-          />
+          <label className="LabelForm">
+            Nom
+            <input
+              name="user_lastName"
+              type="text"
+              id="lastName"
+              className="name formEntry animated"
+              placeholder="Nom"
+              value={formData.user_lastName}
+              onChange={onChangeHandler}
+            />
+          </label>
           <span className="non-valid">{formError.user_lastName}</span>
-          <label className="LabelForm">Adresse mail</label>
-          <input
-            name="user_email"
-            type="text"
-            id="email"
-            className="email formEntry animated"
-            placeholder="Email"
-            value={formData.user_email}
-            onChange={onChangeHandler}
-          />
+          <label className="LabelForm">
+            Adresse mail
+            <input
+              name="user_email"
+              type="text"
+              id="email"
+              className="email formEntry animated"
+              placeholder="Email"
+              value={formData.user_email}
+              onChange={onChangeHandler}
+            />
+          </label>
           <span className="non-valid">{formError.user_email}</span>
-          <label className="LabelForm">Message</label>
-          <textarea
-            name="user_message"
-            id="message"
-            className="message formEntry"
-            placeholder="Votre message"
-            value={formData.user_message}
-            onChange={onChangeHandler}
-          />
+          <label className="LabelForm">
+            Message
+            <textarea
+              name="user_message"
+              id="message"
+              className="message formEntry"
+              placeholder="Votre message"
+              value={formData.user_message}
+              onChange={onChangeHandler}
+            />
+          </label>
           <span className="non-valid">{formError.user_message}</span>
           <br />
           <button type="submit" className="submit" value="Send Email">
@@ -143,8 +145,6 @@ function Contact() {
         </form>
       </div>
 
-
-      /* ANIMATED MESSAGE */
       <div className="messagedefilant">
         <div>
           <p>

@@ -122,12 +122,14 @@ body {
     .letter-border {
       height: 10px;
       width: 100%;
-      background: repeating-linear-gradient(-45deg,
-          $blue,
-          $blue,
-          8px,
-          transparent 8px,
-          transparent 18px);
+      background: repeating-linear-gradient(
+        -45deg,
+        $blue,
+        $blue,
+        8px,
+        transparent 8px,
+        transparent 18px
+      );
     }
 
     .letter-title {
@@ -301,6 +303,25 @@ button.submit:hover {
   font-weight: 200;
 }
 
+.valid {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: stretch;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 0px;
+  margin-bottom: 0.9rem;
+  color: $blue;
+  width: 60%;
+  padding: 0.3rem;
+  border-radius: 30px;
+  font-family: $title-font-family;
+  font-size: 1.17rem;
+  font-weight: 200;
+}
+
 /* TEXTE DEFILANT- BAS DE PAGE */
 .messagedefilant {
   margin-top: 30px;
@@ -338,7 +359,7 @@ button.submit:hover {
   line-height: 1;
 }
 
-.messagedefilant div>p {
+.messagedefilant div > p {
   animation: defilement 25s infinite linear;
   display: inline;
 }
