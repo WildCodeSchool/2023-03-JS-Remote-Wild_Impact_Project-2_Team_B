@@ -9,7 +9,6 @@ import { Heroes } from "./assets/data";
 // US 4 import
 
 import "./App.scss";
-import { Heroes } from "./assets/data";
 
 function App() {
   return (
