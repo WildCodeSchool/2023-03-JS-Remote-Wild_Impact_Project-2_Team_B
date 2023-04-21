@@ -9,7 +9,7 @@ function CatalogueCard({ Heroe }) {
         src={Heroe.image_sm}
         alt="illustration représentant les super héroes."
       />
-      <h1 className="Catalogue-card-title">{Heroe.name}</h1>
+      <h3 className="Catalogue-card-title">{Heroe.name}</h3>
     </div>
   );
 }
