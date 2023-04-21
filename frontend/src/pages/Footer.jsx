@@ -8,13 +8,13 @@ function Footer() {
           <logo className="footer-logo" type="logo" />
           <h3>Narvel Logo</h3>
           <h4 className="list-unstyled">
-            <p>Siège social </p>
-            <p>500 S. Buena Vista Street, Californie États-Unis</p>
+            <p>
+              Siège social 500 S. Buena Vista Street, Californie États-Unis{" "}
+            </p>
           </h4>
         </div>
 
         <div className="footer-column1">
-          {/* <h3 className="footer-title">Menu</h3> */}
           <ul className="list-unstyled">
             <li className="footer-item">Qui sommes nous ?</li>
             <li className="footer-item">Recrutement</li>
@@ -27,7 +27,6 @@ function Footer() {
           <button className="footer-button" type="button">
             Contactez nous
           </button>
-          {/* <h4>Contactez nous</h4> */}
         </div>
       </div>
 
