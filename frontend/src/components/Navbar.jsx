@@ -13,9 +13,6 @@ function Navbar() {
             <Link to="/catalogue">Catalogue</Link>
           </li>
           <li>
-            <Link to="/heroe">Heroe</Link>
-          </li>
-          <li>
             <Link to="/contact">Contact</Link>
           </li>
         </ul>

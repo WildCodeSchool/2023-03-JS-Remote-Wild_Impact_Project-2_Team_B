@@ -1,38 +1,42 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 function HeroeCard({ Heroes }) {
+  const { heroenumber } = useParams();
   return (
     <div className="containerCard">
       <div className="imgSection">
-        <img src={Heroes[0].image_md} alt="" />
+        <img src={Heroes[heroenumber].image_md} alt="" />
       </div>
       <section className="infoSection">
         <section className="descSection">
-          <h2 className="descElement">{Heroes[0].name}</h2>
+          <h2 className="descElement">{Heroes[heroenumber].name}</h2>
           <h3 className="descElement">
-            {Heroes[0].gender} - {Heroes[0].race}
+            {Heroes[heroenumber].gender} - {Heroes[heroenumber].race}
           </h3>
           <p className="descElement">
-            {Heroes[0].fullName} | Born in {Heroes[0].placeOfBirth}
+            {Heroes[heroenumber].fullName} | Born in
+            {Heroes[heroenumber].placeOfBirth}
           </p>
           <h3 className="descElement">Caracteristics</h3>
           <p className="descElement">
-            {Heroes[0].eyeColor} eyes & {Heroes[0].hairColor}
+            {Heroes[heroenumber].eyeColor} eyes &{" "}
+            {Heroes[heroenumber].hairColor} hair
           </p>
           <p className="descElement">
-            First appeared in {Heroes[0].firstAppearance}
+            First appeared in {Heroes[heroenumber].firstAppearance}
           </p>
-          <p className="descElement">Work as {Heroes[0].work}</p>
+          <p className="descElement">Work as {Heroes[heroenumber].work}</p>
         </section>
         <section className="statSection">
           <h3>Statistics</h3>
           <ul>
-            <li>Intelligence : {Heroes[0].intelligence} </li>
-            <li>Strength : {Heroes[0].strength}</li>
-            <li>Speed : {Heroes[0].speed}</li>
-            <li>Durability : {Heroes[0].durability}</li>
-            <li>Power : {Heroes[0].power}</li>
-            <li>Combat : {Heroes[0].combat}</li>
+            <li>Intelligence : {Heroes[heroenumber].intelligence} </li>
+            <li>Strength : {Heroes[heroenumber].strength}</li>
+            <li>Speed : {Heroes[heroenumber].speed}</li>
+            <li>Durability : {Heroes[heroenumber].durability}</li>
+            <li>Power : {Heroes[heroenumber].power}</li>
+            <li>Combat : {Heroes[heroenumber].combat}</li>
           </ul>
         </section>
         <section className="buttonSection">

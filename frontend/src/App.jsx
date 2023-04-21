@@ -1,6 +1,7 @@
 // US 1 import
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
@@ -24,7 +25,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/catalogue" element={<Catalogue />} />
-          <Route path="/heroe" element={<HeroeCard Heroes={Heroes} />} />
+          <Route
+            path="/heroes/:heroenumber"
+            element={<HeroeCard Heroes={Heroes} />}
+          />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Error />} />
         </Routes>
