@@ -2,7 +2,6 @@
 
 // US 2 Import
 import Catalogue from "./pages/Catalogue";
-import { Heroes } from "./assets/data";
 // US 3 import
 import HeroeCard from "./components/HeroeCard";
 import { Heroes } from "./assets/data";
