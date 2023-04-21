@@ -7,12 +7,13 @@ function Panier({ Heroes }) {
     <div className="Panier-container">
       <h1 className="Logo">NARVEL</h1>
 
-      {Heroes.slice(0, 5).map((Heroe) => (
+      {Heroes.slice(0, 7).map((Heroe) => (
         <PanierCard key={Heroe.id} Heroe={Heroe} />
       ))}
 
       <div className="Panier-total">
         <div className="Panier-reduc">
+          <h3>Une réduction ?</h3>
           <input
             type="text"
             id="name"
