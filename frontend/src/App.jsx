@@ -2,12 +2,12 @@
 
 // US 2 Import
 import Catalogue from "./pages/Catalogue";
+import { Heroes } from "./assets/data";
 // US 3 import
 
 // US 4 import
 
 import "./App.scss";
-import { Heroes } from "./assets/data";
 
 function App() {
   return (
