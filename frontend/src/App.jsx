@@ -19,6 +19,8 @@ function App() {
       {/** US 3 Page */}
 
       {/** US 4 Page */}
+
+      /** CONTACT FORM */
       <Contact />
     </div>
   );

@@ -142,6 +142,9 @@ function Contact() {
           </button>
         </form>
       </div>
+
+
+      /* ANIMATED MESSAGE */
       <div className="messagedefilant">
         <div>
           <p>

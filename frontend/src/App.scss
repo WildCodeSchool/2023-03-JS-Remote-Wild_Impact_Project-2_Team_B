@@ -122,14 +122,12 @@ body {
     .letter-border {
       height: 10px;
       width: 100%;
-      background: repeating-linear-gradient(
-        -45deg,
-        $blue,
-        $blue,
-        8px,
-        transparent 8px,
-        transparent 18px
-      );
+      background: repeating-linear-gradient(-45deg,
+          $blue,
+          $blue,
+          8px,
+          transparent 8px,
+          transparent 18px);
     }
 
     .letter-title {
@@ -303,7 +301,7 @@ button.submit:hover {
   font-weight: 200;
 }
 
-/* TEXTE DEFILANT */
+/* TEXTE DEFILANT- BAS DE PAGE */
 .messagedefilant {
   margin-top: 30px;
   display: block;
@@ -340,7 +338,7 @@ button.submit:hover {
   line-height: 1;
 }
 
-.messagedefilant div > p {
+.messagedefilant div>p {
   animation: defilement 25s infinite linear;
   display: inline;
 }
