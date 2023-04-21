@@ -10,10 +10,10 @@ function Navbar() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/catalogue">Catalogue</Link>
+            {/* <Link to="/catalogue">Catalogue</Link> */}
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            {/* <Link to="/contact">Contact</Link> */}
           </li>
         </ul>
       </nav>
