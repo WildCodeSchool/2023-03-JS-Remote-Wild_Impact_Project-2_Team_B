@@ -1,26 +1,23 @@
 import React from "react";
+import MenuFooter from "../components/MenuFooter";
+
+const menufooter = {
+  link1: "Qui sommes nous?",
+  link2: "Recrutement",
+  link3: "Presse et actualités",
+};
 
 function Footer() {
   return (
     <footer className="footer-container">
       <div className="row1">
         <div className="footer-column">
-          <logo className="footer-logo" type="logo" />
-          <h3>Narvel Logo</h3>
-          <h4 className="list-unstyled">
-            <p>
-              Siège social 500 S. Buena Vista Street, Californie États-Unis{" "}
-            </p>
+          <h3 className="footer-logo">Narvel</h3>
+          <h4 className="footer-adress">
+            Siège social 501 S. Buena Vista Street, Californie États-Unis
           </h4>
         </div>
-
-        <div className="footer-column1">
-          <ul className="list-unstyled">
-            <li className="footer-item">Qui sommes nous ?</li>
-            <li className="footer-item">Recrutement</li>
-            <li className="footer-item">Presse et actualité</li>
-          </ul>
-        </div>
+        <MenuFooter menufooter={menufooter} />
 
         <div className="footer-column2">
           <h3 className="footer-title">Besoin d'aide</h3>
