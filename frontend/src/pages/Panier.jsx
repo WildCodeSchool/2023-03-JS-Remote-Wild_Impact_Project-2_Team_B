@@ -1,14 +1,9 @@
 import React from "react";
-// import PanierCard from "@components/PanierCard";
 
 function Panier() {
   return (
     <div className="Panier-container">
       <h1 className="logo">NARVEL</h1>
-
-      {/* {Heroes.slice(0, 7).map((Heroe) => (
-        <PanierCard key={Heroe.id} Heroe={Heroe} />
-      ))} */}
 
       <div className="Panier-total">
         <div className="Panier-reduc">
