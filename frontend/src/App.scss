@@ -7,11 +7,10 @@
   font-family: $base-font-family;
 }
 
-
 body {
   background-color: $background-black;
   color: $white;
-  }
+}
 
 /* TITLE */
 .contactTitle {
@@ -381,7 +380,7 @@ button.submit:hover {
     margin-left: -50%;
   }
 }
-=======
+
 @media screen and (max-width: 834px) {
   .containerCard {
     flex-direction: column;
