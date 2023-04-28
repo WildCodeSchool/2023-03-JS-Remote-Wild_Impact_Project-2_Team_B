@@ -5,10 +5,10 @@ function Catalogue() {
   const [heroes, setHeroes] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/heroes')
-    .then(data => data.json())
-    .then(data => setHeroes(data))
-  }, [])
+    fetch("http://localhost:5000/heroes")
+      .then((data) => data.json())
+      .then((data) => setHeroes(data));
+  }, []);
 
   return (
     <div>
@@ -21,6 +21,5 @@ function Catalogue() {
     </div>
   );
 }
-
 
 export default Catalogue;
