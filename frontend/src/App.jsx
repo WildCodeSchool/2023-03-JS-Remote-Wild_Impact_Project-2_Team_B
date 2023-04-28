@@ -3,6 +3,7 @@ import React from "react";
 
 // US 2 Import
 import Catalogue from "./pages/Catalogue";
+import Panier from "./pages/Panier";
 // US 3 import
 import HeroeCard from "./components/HeroeCard";
 import { Heroes } from "./assets/data";
@@ -21,6 +22,7 @@ function App() {
 
       {/** US 2 Page */}
       <Catalogue />
+      <Panier />
       {/** US 3 Page */}
       <HeroeCard Heroes={Heroes} />
       {/** US 4 Page */}
