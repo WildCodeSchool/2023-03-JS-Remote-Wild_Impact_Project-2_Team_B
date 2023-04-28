@@ -1,7 +1,7 @@
 // US 1 import
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar_old";
+import Navbar from "./components/Navbar";
 
 // US 2 Import
 
