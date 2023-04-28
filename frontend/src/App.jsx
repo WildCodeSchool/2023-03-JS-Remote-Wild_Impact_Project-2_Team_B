@@ -1,5 +1,7 @@
 // US 1 import
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 // US 2 Import
 import Catalogue from "./pages/Catalogue";
@@ -18,17 +20,25 @@ import "./App.scss";
 function App() {
   return (
     <div className="App">
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/heroes/:heroenumber"
+            element={<HeroeCard Heroes={Heroes} />}
+          />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
       {/** US 1 Page */}
 
       {/** US 2 Page */}
       <Catalogue />
       <Panier />
       {/** US 3 Page */}
-      <HeroeCard Heroes={Heroes} />
-      {/** US 4 Page */}
 
+      {/** US 4 Page */}
       <Footer />
-      <Contact />
     </div>
   );
 }
