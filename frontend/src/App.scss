@@ -1,6 +1,5 @@
 @import "./components/Variables.scss";
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,7 +20,7 @@ ul {
 }
 
 body {
-  background-color: black;
+  background-color: $background-black;
   color: white;
 }
 
@@ -128,7 +127,6 @@ body {
   margin-right: auto;
   display: block;
 }
-
 
 body {
   background-color: $background-black;
@@ -629,3 +627,69 @@ button.submit:hover {
 }
 
 // --- statisticsGraph ---
+
+.Catalogue-logo {
+  @include logo(70px);
+  text-align: center;
+  margin: 30px;
+}
+
+.Catalogue-main {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Catalogue-card {
+  outline-offset: -1px;
+  height: 200px;
+  width: 105px;
+  outline: 1px $white solid;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.Card-img {
+  width: 100%;
+  height: 160px;
+  border-radius: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.Card-title {
+  color: $white;
+  font-size: 12px;
+  text-align: center;
+  margin: 5px 2px 0 2px;
+}
+
+@media only screen and (min-width: 768px) {
+  .Catalogue-main {
+    gap: 50px;
+    margin: 70px 20px 0 20px;
+  }
+
+  .Logo {
+    @include logo(70px);
+    margin-top: 40px;
+  }
+
+  .Catalogue-card {
+    height: 240px;
+    width: 135px;
+  }
+
+  .Card-img {
+    height: 190px;
+  }
+
+  .Card-title {
+    margin: 12px 2px 0 2px;
+  }
+}
