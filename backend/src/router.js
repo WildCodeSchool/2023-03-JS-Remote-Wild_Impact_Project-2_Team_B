@@ -21,6 +21,7 @@ router.get("/heroes", (req, res) => {
   connection
     .query("SELECT * FROM heroe")
     .then(([result]) => {
+      // donne moi le premier élément du tableau et appelle le result
       res.status(200).json(result);
     })
     .catch((err) => {
