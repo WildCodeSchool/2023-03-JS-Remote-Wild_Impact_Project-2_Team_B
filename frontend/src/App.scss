@@ -1,6 +1,5 @@
 @import "./components/Variables.scss";
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,11 +7,45 @@
   font-family: $base-font-family;
 }
 
-.footer-logo {
-  @include logo(2.8rem);
-  text-align: left;
+.App {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar-container {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+.menu-logo {
+  @include logo(3.6rem);
+  margin-top: 1%;
+}
+
+.nav-container {
   margin-top: 1rem;
-  margin-bottom: 0px;
+}
+
+.menu-item {
+  margin-top: 0.6rem;
+  text-align: left;
+  color: $white;
+  font-family: $title-font-family;
+  display: block;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.header-button {
+  @include mainBtn($white);
+}
+
+button.footer-button:hover {
+  @include mainBtnHover($blue);
 }
 
 ul {
@@ -26,11 +59,17 @@ body {
 }
 
 .footer-container {
-  position: absolute;
-  bottom: 0;
+  margin-top: 10rem;
   width: 100%;
   height: 100px;
   font-family: $title-font-family;
+}
+
+.footer-logo {
+  @include logo(2.8rem);
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 0px;
 }
 
 .footer-column {
@@ -67,6 +106,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 @media screen and (max-width: 600px) {
   .row1 {
     width: 100%;
@@ -87,6 +127,7 @@ body {
   .footer-item {
     display: inline-block;
   }
+
   .footer-column1 {
     width: 80%;
   }
@@ -96,12 +137,14 @@ body {
   font-family: $base-font-family;
   text-align: left;
 }
+
 .list-unstyled {
   display: flex;
   justify-content: space-around;
   text-align: center;
   flex-direction: column;
 }
+
 .row2 {
   width: 100%;
   display: flex;
@@ -111,11 +154,13 @@ body {
   margin-right: auto;
   align-items: center;
 }
+
 .container {
   min-height: 100%;
   position: relative;
   padding-bottom: 100px;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -128,7 +173,6 @@ body {
   margin-right: auto;
   display: block;
 }
-
 
 body {
   background-color: $background-black;
@@ -537,6 +581,7 @@ button.submit:hover {
     margin: auto;
   }
 }
+
 // ---------------- === HEROECARD === ----------------
 .containerCard {
   display: flex;
@@ -558,6 +603,7 @@ button.submit:hover {
   text-transform: uppercase;
   margin-top: 0.5rem;
 }
+
 .descElement {
   padding: 0.2rem;
 }
