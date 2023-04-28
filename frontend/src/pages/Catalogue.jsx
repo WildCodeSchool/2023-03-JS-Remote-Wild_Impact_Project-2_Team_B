@@ -1,13 +1,20 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useEffect, useState } from "react";
 import CatalogueCard from "@components/CatalogueCard";
 
-function Catalogue({ Heroes }) {
+function Catalogue() {
+  const [heroes, setHeroes] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/heroes')
+    .then(data => data.json())
+    .then(data => setHeroes(data))
+  }, [])
+
   return (
     <div>
       <h1 className="Catalogue-logo">NARVEL</h1>
       <div className="Catalogue-main">
-        {Heroes.map((Heroe) => (
+        {heroes.map((Heroe) => (
           <CatalogueCard key={Heroe.id} Heroe={Heroe} />
         ))}
       </div>
@@ -15,8 +22,5 @@ function Catalogue({ Heroes }) {
   );
 }
 
-Catalogue.propTypes = {
-  Heroes: PropTypes.arrayOf(PropTypes.shape).isRequired,
-};
 
 export default Catalogue;

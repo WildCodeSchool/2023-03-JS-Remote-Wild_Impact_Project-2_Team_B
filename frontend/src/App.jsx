@@ -20,7 +20,7 @@ function App() {
       {/** US 1 Page */}
 
       {/** US 2 Page */}
-      <Catalogue Heroes={Heroes} />
+      <Catalogue />
       {/** US 3 Page */}
       <HeroeCard Heroes={Heroes} />
       {/** US 4 Page */}
