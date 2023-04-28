@@ -642,27 +642,54 @@ button.submit:hover {
 }
 
 .Catalogue-card {
+  outline-offset: -1px;
   height: 200px;
-  width: 100px;
-  // border: 2px $white solid;
+  width: 105px;
+  outline: 1px $white solid;
   border-radius: 20px;
   margin-top: 20px;
   cursor: pointer;
+  position: relative;
+  z-index: 0;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .Card-img {
-  width: 96px;
+  width: 100%;
   height: 160px;
   border-radius: 16px;
-  // border: 2px $white solid;
+  position: relative;
+  z-index: 2;
 }
 
 .Card-title {
-  margin-top: 3px;
   color: $white;
   font-size: 12px;
   text-align: center;
-  margin: 3px;
-  border: 2px $white solid;
-  padding: 5px;
+  margin: 5px 2px 0 2px;
+}
+
+@media only screen and (min-width: 768px) {
+  .Catalogue-main {
+    gap: 50px;
+    margin: 70px 20px 0 20px;
+  }
+
+  .Logo {
+    @include logo(70px);
+    margin-top: 40px;
+  }
+
+  .Catalogue-card {
+    height: 240px;
+    width: 135px;
+  }
+
+  .Card-img {
+    height: 190px;
+  }
+
+  .Card-title {
+    margin: 12px 2px 0 2px;
+  }
 }
