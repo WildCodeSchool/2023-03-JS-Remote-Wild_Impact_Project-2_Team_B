@@ -2,7 +2,7 @@
 import React from "react";
 
 // US 2 Import
-
+import Catalogue from "./pages/Catalogue";
 // US 3 import
 import HeroeCard from "./components/HeroeCard";
 import { Heroes } from "./assets/data";
@@ -20,7 +20,7 @@ function App() {
       {/** US 1 Page */}
 
       {/** US 2 Page */}
-
+      <Catalogue Heroes={Heroes} />
       {/** US 3 Page */}
       <HeroeCard Heroes={Heroes} />
       {/** US 4 Page */}

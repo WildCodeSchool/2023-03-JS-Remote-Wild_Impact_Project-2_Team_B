@@ -1,6 +1,5 @@
 @import "./components/Variables.scss";
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,7 +20,7 @@ ul {
 }
 
 body {
-  background-color: black;
+  background-color: $background-black;
   color: white;
 }
 
@@ -128,7 +127,6 @@ body {
   margin-right: auto;
   display: block;
 }
-
 
 body {
   background-color: $background-black;
@@ -629,3 +627,42 @@ button.submit:hover {
 }
 
 // --- statisticsGraph ---
+
+.Catalogue-logo {
+  @include logo(70px);
+  text-align: center;
+  margin: 30px;
+}
+
+.Catalogue-main {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Catalogue-card {
+  height: 200px;
+  width: 100px;
+  // border: 2px $white solid;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.Card-img {
+  width: 96px;
+  height: 160px;
+  border-radius: 16px;
+  // border: 2px $white solid;
+}
+
+.Card-title {
+  margin-top: 3px;
+  color: $white;
+  font-size: 12px;
+  text-align: center;
+  margin: 3px;
+  border: 2px $white solid;
+  padding: 5px;
+}
