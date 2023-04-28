@@ -7,7 +7,11 @@ import React from "react";
 import HeroeCard from "./components/HeroeCard";
 import { Heroes } from "./assets/data";
 // US 4 import
+
+import Footer from "./pages/Footer";
+
 import Contact from "./pages/Contact";
+
 import "./App.scss";
 
 function App() {
@@ -20,6 +24,8 @@ function App() {
       {/** US 3 Page */}
       <HeroeCard Heroes={Heroes} />
       {/** US 4 Page */}
+
+      <Footer />
       <Contact />
     </div>
   );
