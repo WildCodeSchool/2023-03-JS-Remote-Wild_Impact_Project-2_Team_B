@@ -68,7 +68,6 @@ function Contact() {
   return (
     <div>
       <div className="container-form">
-        <h1 className="logo">narvel</h1>
         <div className="anim-mail">
           <div className="letter-image">
             <div className="animated-mail">
