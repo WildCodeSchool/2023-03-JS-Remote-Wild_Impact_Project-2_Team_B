@@ -1,24 +1,44 @@
-import Home from "./pages/Home";
 // US 1 import
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 // US 2 Import
-
+import Catalogue from "./pages/Catalogue";
+import Panier from "./pages/Panier";
 // US 3 import
-
+import HeroeCard from "./components/HeroeCard";
+import { Heroes } from "./assets/data";
 // US 4 import
 
+import Footer from "./pages/Footer";
 
-import "./App.css";
+import Contact from "./pages/Contact";
+
+import "./App.scss";
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/heroes/:heroenumber"
+            element={<HeroeCard Heroes={Heroes} />}
+          />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
       {/** US 1 Page */}
+
       {/** US 2 Page */}
+      <Catalogue />
+      <Panier />
       {/** US 3 Page */}
+
       {/** US 4 Page */}
-      <p>coucou</p>
+      <Footer />
     </div>
   );
 }
