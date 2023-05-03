@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/catalogue" element={<Catalogue />} />
-          <Route path="/heroes" element={<HeroeCard Heroes={Heroes} />} />
+          <Route path="/panier" element={<Panier />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
@@ -35,7 +35,6 @@ function App() {
 
       {/**  */}
       {/** US 4 Page */}
-      <Panier />
       <Footer />
     </div>
   );
