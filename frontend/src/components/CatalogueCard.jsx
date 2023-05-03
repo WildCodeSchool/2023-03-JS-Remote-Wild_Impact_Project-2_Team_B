@@ -1,24 +1,19 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function CatalogueCard({ Heroe }) {
   return (
-    <div className="Catalogue-card">
-      <img
-        className="Card-img"
-        src={Heroe.image_sm}
-        alt="des différents super héroes."
-      />
-      <h3 className="Card-title">{Heroe.name}</h3>
-    </div>
+    <Link to={`/heroes/${Heroe.id}`} className="Catalogue-link">
+      <div className="Catalogue-card">
+        <img
+          className="Card-img"
+          src={Heroe.image_sm}
+          alt="des différents super héroes."
+        />
+        <h3 className="Card-title">{Heroe.name}</h3>
+      </div>
+    </Link>
   );
 }
-
-CatalogueCard.propTypes = {
-  Heroe: PropTypes.shape({
-    image_sm: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-  }).isRequired,
-};
 
 export default CatalogueCard;
