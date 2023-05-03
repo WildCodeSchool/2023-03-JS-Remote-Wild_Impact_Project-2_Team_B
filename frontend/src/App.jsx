@@ -8,7 +8,6 @@ import Catalogue from "./pages/Catalogue";
 import Panier from "./pages/Panier";
 // US 3 import
 import HeroeCard from "./components/HeroeCard";
-import { Heroes } from "./assets/data";
 // US 4 import
 
 import Footer from "./pages/Footer";
@@ -24,7 +23,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/catalogue" element={<Catalogue />} />
+          <Route path="/heroes" element={<Catalogue />} />
+          <Route path="/heroes/:id" element={<HeroeCard />} />
           <Route path="/panier" element={<Panier />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
