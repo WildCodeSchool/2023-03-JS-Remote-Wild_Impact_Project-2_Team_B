@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function CatalogueCard({ Heroe }) {
   return (
-    <Link to={`/heroes/${Heroe.id}`}>
+    <Link to={`/heroes/${Heroe.id}`} className="Catalogue-link">
       <div className="Catalogue-card">
         <img
           className="Card-img"
