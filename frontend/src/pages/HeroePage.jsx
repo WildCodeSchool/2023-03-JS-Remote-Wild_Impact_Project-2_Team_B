@@ -8,7 +8,7 @@ function HeroePage() {
   const [heroe, setHeroe] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:5002/heroes/${params.heroenumber}`)
+    fetch(`http://localhost:5000/heroes/${params.heroenumber}`)
       .then((res) => res.json())
       .then((data) => setHeroe(data))
       .catch((err) => console.error(err));

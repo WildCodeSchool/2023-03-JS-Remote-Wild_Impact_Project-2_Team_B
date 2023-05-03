@@ -5,7 +5,7 @@ function SelectItems() {
   const [heroes, setHeroes] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5001/heroes")
+    fetch("http://localhost:5000/heroes")
       .then((data) => data.json())
       .then((data) => setHeroes(data));
   }, []);
