@@ -34,7 +34,7 @@ router.get("/heroes/:id", (req, res) => {
   connection
     .query(`SELECT * FROM heroe WHERE id = ${id}`)
     .then(([result]) => {
-      res.status(200).json(result);
+      res.status(200).json(result[0]);
     })
     .catch((err) => {
       res.status(500).send(err);
