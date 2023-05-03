@@ -21,12 +21,12 @@ function Navbar() {
             </li>
             <li>
               <Link to="/catalogue" className=" menu-item">
-                Nos heroes
+                Our super heroes
               </Link>
             </li>
             <li>
               <Link to="/heroes" className="menu-item">
-                Carte heroe
+                Heroe card
               </Link>
             </li>
             <li>

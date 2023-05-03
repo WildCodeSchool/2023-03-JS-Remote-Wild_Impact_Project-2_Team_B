@@ -1,6 +1,7 @@
 import React from "react";
 import CategoriesJobs from "../components/CategoriesJobs";
 import SelectItems from "../components/SelectItems";
+import SmartCity from "../assets/Smart-city-main.png";
 
 function Homepage() {
   return (
@@ -14,7 +15,7 @@ function Homepage() {
         <div className="image-container">
           <img
             className="main-picture"
-            src="\src\assets\image-prrincipale-smart-city.png"
+            src={SmartCity}
             alt="city"
             width="100%"
           />
@@ -22,21 +23,20 @@ function Homepage() {
         <div className="header-animation" />
         <div>
           <button className="header-button" type="button">
-            Louer Superheroes
+            Hire Super heroes
           </button>
         </div>
 
         <div className="messagedefilant">
           <div>
             <p>
-              {" "}
               <span className="puce">•</span> HIRE SUPERHERO
-              <span className="puce">•</span> HIRE SUPERHERO{" "}
+              <span className="puce">•</span> HIRE SUPERHERO
               <span className="puce">•</span>
               HIRE SUPERHERO<span className="puce">•</span> HIRE SUPERHERO
               <span className="puce">•</span> HIRE SUPERHERO
               <span className="puce">•</span> HIRE SUPERHERO
-              <span className="puce">•</span> HIRE SUPERHERO{" "}
+              <span className="puce">•</span> HIRE SUPERHERO
               <span className="puce">•</span> HIRE SUPERHERO
               <span className="puce">•</span>
               HIRE SUPERHERO
@@ -52,15 +52,14 @@ function Homepage() {
         <div className="messagedefilant hihgt">
           <div>
             <p>
-              {" "}
               <span className="puce">•</span> BEST TEAM FOR YOU JOB
-              <span className="puce">•</span> HIRE SUPERHERO{" "}
+              <span className="puce">•</span> HIRE SUPERHERO
               <span className="puce">•</span>
               BEST TEAM FOR YOU JOB<span className="puce">•</span> HIRE
               SUPERHERO
               <span className="puce">•</span> BEST TEAM FOR YOU JOB
               <span className="puce">•</span> HIRE SUPERHERO
-              <span className="puce">•</span> BEST TEAM FOR YOU JOB{" "}
+              <span className="puce">•</span> BEST TEAM FOR YOU JOB
               <span className="puce">•</span> HIRE SUPERHERO
               <span className="puce">•</span>
               BEST TEAM FOR YOU JOB
