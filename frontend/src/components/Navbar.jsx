@@ -26,7 +26,7 @@ function Navbar() {
             </li>
             <li>
               <Link to="/cart" className="menu-item">
-                Cart
+                Shopping Cart
               </Link>
             </li>
             <li>
