@@ -5,7 +5,7 @@ function SelectItems() {
   const [heroes, setHeroes] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/heroes")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/heroes`)
       .then((data) => data.json())
       .then((data) => setHeroes(data));
   }, []);
