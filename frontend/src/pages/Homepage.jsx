@@ -29,7 +29,6 @@ function Homepage() {
         <div className="messagedefilant">
           <div>
             <p>
-              {" "}
               <span className="puce">•</span> HIRE SUPERHERO
               <span className="puce">•</span> HIRE SUPERHERO{" "}
               <span className="puce">•</span>
@@ -52,7 +51,6 @@ function Homepage() {
         <div className="messagedefilant hihgt">
           <div>
             <p>
-              {" "}
               <span className="puce">•</span> BEST TEAM FOR YOU JOB
               <span className="puce">•</span> HIRE SUPERHERO{" "}
               <span className="puce">•</span>
