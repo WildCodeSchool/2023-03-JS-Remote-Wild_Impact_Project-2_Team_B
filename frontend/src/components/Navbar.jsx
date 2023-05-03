@@ -20,13 +20,13 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/catalogue" className=" menu-item">
+              <Link to="/heroes" className=" menu-item">
                 Our super heroes
               </Link>
             </li>
             <li>
-              <Link to="/heroes" className="menu-item">
-                Heroe card
+              <Link to="/panier" className="menu-item">
+                Panier
               </Link>
             </li>
             <li>
