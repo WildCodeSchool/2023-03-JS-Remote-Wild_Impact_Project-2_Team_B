@@ -25,8 +25,8 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/panier" className="menu-item">
-                Panier
+              <Link to="/cart" className="menu-item">
+                Cart
               </Link>
             </li>
             <li>
