@@ -2,7 +2,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-
+import Homepage from "./pages/Homepage";
 // US 2 Import
 import Catalogue from "./pages/Catalogue";
 import Panier from "./pages/Panier";
@@ -23,21 +23,19 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route
-            path="/heroes/:heroenumber"
-            element={<HeroeCard Heroes={Heroes} />}
-          />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/catalogue" element={<Catalogue />} />
+          <Route path="/heroes" element={<HeroeCard Heroes={Heroes} />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
       {/** US 1 Page */}
 
-      {/** US 2 Page */}
-      <Catalogue />
-      <Panier />
-      {/** US 3 Page */}
+      {/** <Catalogue /> */}
 
+      {/**  */}
       {/** US 4 Page */}
+      <Panier />
       <Footer />
     </div>
   );
