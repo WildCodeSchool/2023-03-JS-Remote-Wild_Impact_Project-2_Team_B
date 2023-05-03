@@ -53,11 +53,21 @@ $base-font-family: "Lato", sans-serif;
   line-height: 1;
 }
 
+@mixin navBtnHover($color-hover) {
+  color: $color-hover;
+  letter-spacing: 0.4rem;
+  transition: all 0.3s ease;
+  border-bottom: 2px dashed;
+  border-color: $color-hover;
+  line-height: 1;
+  padding-bottom: 0.4rem;
+}
+
 @mixin logo($font-size) {
   color: #e6d6d4;
   -webkit-text-fill-color: #e6d6d4;
-  letter-spacing: 0rem;
-  -webkit-text-stroke: 0.1rem #a81f11;
+  letter-spacing: 0.14rem;
+  -webkit-text-stroke: 0.06rem #a81f11;
   line-height: 1;
   text-transform: uppercase;
   font-family: $title-font-family;

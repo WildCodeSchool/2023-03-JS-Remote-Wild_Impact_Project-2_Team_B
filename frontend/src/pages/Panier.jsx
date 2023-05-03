@@ -3,8 +3,6 @@ import React from "react";
 function Panier() {
   return (
     <div className="Panier-container">
-      <h1 className="logo">NARVEL</h1>
-
       <div className="Panier-total">
         <div className="Panier-reduc">
           <h3>Une réduction ?</h3>
