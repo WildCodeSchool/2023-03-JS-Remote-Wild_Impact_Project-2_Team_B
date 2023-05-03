@@ -14,7 +14,7 @@ function Homepage() {
         <div className="image-container">
           <img
             className="main-picture"
-            src="\src\assets\image-prrincipale-smart-city.png"
+            src="\src\assets\Smart-city-main.png"
             alt="city"
             width="100%"
           />
