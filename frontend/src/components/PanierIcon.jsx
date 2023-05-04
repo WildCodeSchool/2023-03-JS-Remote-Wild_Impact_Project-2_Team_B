@@ -7,7 +7,7 @@ function PanierIcon() {
       <ul>
         <li>
           <Link to="/panier" className="panier-icon">
-            <p>Caddy</p>
+            <p>Basket</p>
           </Link>
         </li>
       </ul>

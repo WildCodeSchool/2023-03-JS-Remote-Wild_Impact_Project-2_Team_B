@@ -65,6 +65,8 @@ $base-font-family: "Lato", sans-serif;
   cursor: url(https://ani.cursors-4u.net/comics/mic-1/mic14.cur), auto !important;
 }
 
+// ---------------- === logo === ----------------
+
 @mixin logo($font-size) {
   color: #e6d6d4;
   -webkit-text-fill-color: #e6d6d4;

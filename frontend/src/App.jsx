@@ -29,12 +29,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
-      {/** US 1 Page */}
-
-      {/** <Catalogue /> */}
-
-      {/**  */}
-      {/** US 4 Page */}
       <Footer />
     </div>
   );
