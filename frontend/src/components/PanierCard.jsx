@@ -1,6 +1,6 @@
 import React from "react";
 
-function PanierCard({ item }) {
+function PanierCard({ item, removeItem }) {
   return (
     <div className="Panier-main">
       <ul className="Panier-card">
@@ -11,7 +11,9 @@ function PanierCard({ item }) {
           <p>{item.name}</p>
         </li>
         <li>
-          <button type="button">X</button>
+          <button type="button" onClick={() => removeItem(item.id)}>
+            X
+          </button>
         </li>
       </ul>
     </div>

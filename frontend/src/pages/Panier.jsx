@@ -1,11 +1,15 @@
 import React from "react";
 import PanierCard from "@components/PanierCard";
 
-function Panier({ panier }) {
+function Panier({ panier, setPanier }) {
+  const removeItem = (id) => {
+    setPanier(panier.filter((item) => item.id !== id));
+  };
+
   return (
     <div className="Panier-container">
       {panier.map((item) => (
-        <PanierCard item={item} />
+        <PanierCard key={item.id} item={item} removeItem={removeItem} />
       ))}
       <div className="Panier-total">
         <div className="Panier-reduc">
