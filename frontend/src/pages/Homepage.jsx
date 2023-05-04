@@ -32,7 +32,7 @@ function Homepage() {
           </div>
         </div>
         <div className="button-container">
-          <Link to="/catalogue" className="header-button">
+          <Link to="/heroes" className="header-button">
             Hire Super heroes
           </Link>
         </div>
