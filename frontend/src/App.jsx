@@ -8,8 +8,6 @@ import Homepage from "./pages/Homepage";
 import Catalogue from "./pages/Catalogue";
 import Panier from "./pages/Panier";
 // US 3 import
-import HeroeCard from "./components/HeroeCard";
-import { Heroes } from "./assets/data";
 // US 4 import
 
 import Footer from "./pages/Footer";
