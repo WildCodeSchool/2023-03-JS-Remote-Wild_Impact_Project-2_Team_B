@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import HeroeCard from "../components/HeroeCard";
 
-function HeroePage() {
+function HeroePage({ setPanier }) {
   const params = useParams();
-
   const [heroe, setHeroe] = useState();
 
   useEffect(() => {
@@ -14,7 +13,9 @@ function HeroePage() {
       .catch((err) => console.error(err));
   }, []);
 
-  return <div> {heroe && <HeroeCard heroe={heroe} />}</div>;
+  return (
+    <div> {heroe && <HeroeCard heroe={heroe} setPanier={setPanier} />}</div>
+  );
 }
 
 export default HeroePage;

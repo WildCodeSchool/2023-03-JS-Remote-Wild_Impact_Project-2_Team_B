@@ -1,6 +1,6 @@
 import React from "react";
 
-function HeroeCard({ heroe }) {
+function HeroeCard({ heroe, setPanier }) {
   return (
     <div className="containerCard">
       <div className="imgSection">
@@ -36,7 +36,12 @@ function HeroeCard({ heroe }) {
           </ul>
         </section>
         <section className="buttonSection">
-          <button type="button">Louer mon super héros</button>
+          <button
+            type="button"
+            onClick={() => setPanier((prevState) => [...prevState, heroe])}
+          >
+            Louer mon super héros
+          </button>
         </section>
       </section>
     </div>

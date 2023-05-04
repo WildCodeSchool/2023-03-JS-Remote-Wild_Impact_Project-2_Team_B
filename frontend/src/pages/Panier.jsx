@@ -1,8 +1,12 @@
 import React from "react";
+import PanierCard from "@components/PanierCard";
 
-function Panier() {
+function Panier({ panier }) {
   return (
     <div className="Panier-container">
+      {panier.map((item) => (
+        <PanierCard item={item} />
+      ))}
       <div className="Panier-total">
         <div className="Panier-reduc">
           <h3>Une réduction ?</h3>
@@ -15,7 +19,7 @@ function Panier() {
           <button type="button">Ajouter</button>
         </div>
 
-        <h3>Total : {500} $</h3>
+        <h3>Total : {panier.length * 500} $</h3>
         <button className="Panier-btn-checkout" type="button">
           Paiement
         </button>
