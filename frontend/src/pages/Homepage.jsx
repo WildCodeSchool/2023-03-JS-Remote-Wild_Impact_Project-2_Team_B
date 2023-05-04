@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CategoriesJobs from "../components/CategoriesJobs";
 import SelectItems from "../components/SelectItems";
 import SmartCity from "../assets/Smart-city-main.png";
@@ -8,9 +9,9 @@ function Homepage() {
     <div>
       <header className="header-container">
         <div className="main-title">
-          <h2 className="header-title">TEAM POUR VOTRE JOB</h2>
-          <h1 className="header-title">SUPERHEROES A LOUER</h1>
-          <h4 className="header-title">Découvrez nos services</h4>
+          <h2 className="header-title">TEAM FOR YOUR JOB</h2>
+          <h1 className="header-title">SUPER HEROES TO HIRE</h1>
+          <h4 className="header-title">Discover our services</h4>
         </div>
         <div className="image-container">
           <img
@@ -20,11 +21,20 @@ function Homepage() {
             width="100%"
           />
         </div>
-        <div className="header-animation" />
-        <div>
-          <button className="header-button" type="button">
+        <div className="header-animation">
+          <div className="camera_x">
+            <div className="camera_y">
+              <div className="triangle">
+                <div className="triangle_outer clip" />
+                <div className="triangle_inner clip" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="button-container">
+          <Link to="/catalogue" className="header-button">
             Hire Super heroes
-          </button>
+          </Link>
         </div>
 
         <div className="messagedefilant">
