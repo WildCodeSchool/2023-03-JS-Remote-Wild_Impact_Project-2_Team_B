@@ -1,6 +1,6 @@
 import React from "react";
 
-function HeroeCard({ heroe, setPanier }) {
+function HeroeCard({ heroe, setPanier, panier }) {
   return (
     <div className="containerCard">
       <div className="imgSection">
@@ -38,7 +38,11 @@ function HeroeCard({ heroe, setPanier }) {
         <section className="buttonSection">
           <button
             type="button"
-            onClick={() => setPanier((prevState) => [...prevState, heroe])}
+            onClick={() =>
+              panier.some((item) => item.id === heroe.id)
+                ? alert("L'article est déjà dans le panier")
+                : setPanier((prevState) => [...prevState, heroe])
+            }
           >
             Louer mon super héros
           </button>

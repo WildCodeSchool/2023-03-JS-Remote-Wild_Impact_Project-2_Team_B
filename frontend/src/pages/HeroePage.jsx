@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import HeroeCard from "../components/HeroeCard";
 
-function HeroePage({ setPanier }) {
+function HeroePage({ setPanier, panier }) {
   const params = useParams();
   const [heroe, setHeroe] = useState();
 
@@ -14,7 +14,12 @@ function HeroePage({ setPanier }) {
   }, []);
 
   return (
-    <div> {heroe && <HeroeCard heroe={heroe} setPanier={setPanier} />}</div>
+    <div>
+      {" "}
+      {heroe && (
+        <HeroeCard heroe={heroe} setPanier={setPanier} panier={panier} />
+      )}
+    </div>
   );
 }
 

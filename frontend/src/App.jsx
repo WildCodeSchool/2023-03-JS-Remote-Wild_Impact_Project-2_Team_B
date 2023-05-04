@@ -24,7 +24,7 @@ function App() {
           <Route path="/heroes" element={<Catalogue />} />
           <Route
             path="/heroes/:heroenumber"
-            element={<HeroePage setPanier={setPanier} />}
+            element={<HeroePage setPanier={setPanier} panier={panier} />}
           />
           <Route
             path="/cart"
