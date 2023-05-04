@@ -25,8 +25,8 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/heroes" className="menu-item">
-                Heroe card
+              <Link to="/panier" className="menu-item">
+                Caddy
               </Link>
             </li>
             <li>

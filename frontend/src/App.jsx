@@ -2,6 +2,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import PanierIcon from "./components/PanierIcon";
 import Homepage from "./pages/Homepage";
 // US 2 Import
 import Catalogue from "./pages/Catalogue";
@@ -21,11 +22,12 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <PanierIcon />
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/catalogue" element={<Catalogue />} />
-          <Route path="/heroes" element={<HeroeCard Heroes={Heroes} />} />
+          <Route path="/panier" element={<Panier />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
@@ -35,7 +37,6 @@ function App() {
 
       {/**  */}
       {/** US 4 Page */}
-      <Panier />
       <Footer />
     </div>
   );
