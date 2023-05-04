@@ -40,11 +40,15 @@ function HeroeCard({ heroe, setPanier, panier }) {
             type="button"
             onClick={() =>
               panier.some((item) => item.id === heroe.id)
-                ? alert("L'article est déjà dans le panier")
+                ? setPanier((prevState) =>
+                    prevState.filter((item) => item.id !== heroe.id)
+                  )
                 : setPanier((prevState) => [...prevState, heroe])
             }
           >
-            Louer mon super héros
+            {panier.some((item) => item.id === heroe.id)
+              ? "Retirer du panier"
+              : "Louer mon super héros"}
           </button>
         </section>
       </section>
