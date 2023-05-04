@@ -2,9 +2,9 @@ import React from "react";
 import MenuFooter from "../components/MenuFooter";
 
 const menufooter = {
-  link1: "Qui sommes nous?",
-  link2: "Recrutement",
-  link3: "Presse et actualités",
+  link1: "Home",
+  link2: "Our super heroes",
+  link3: "Shopping card",
 };
 
 function Footer() {
@@ -14,15 +14,15 @@ function Footer() {
         <div className="footer-column">
           <h3 className="footer-logo">Narvel</h3>
           <h4 className="footer-adress">
-            Siège social 501 S. Buena Vista Street, Californie États-Unis
+            Head office 501 S. Buena Vista Street, Californie États-Unis
           </h4>
         </div>
         <MenuFooter menufooter={menufooter} />
 
         <div className="footer-column2">
-          <h3 className="footer-title">Besoin d'aide</h3>
+          <h3 className="footer-title">Need for assistance</h3>
           <button className="footer-button" type="button">
-            Contactez nous
+            Contact us
           </button>
         </div>
       </div>
@@ -30,7 +30,7 @@ function Footer() {
       <div className="row2">
         <p className="col4">
           &copy;{new Date().getFullYear()} | Narvel France | All rights reserved
-          | CGV | CGU | Mentions légales | Gestion des cookies
+          | CGV | CGU | Legal notices | Cookies management
         </p>
       </div>
     </footer>
