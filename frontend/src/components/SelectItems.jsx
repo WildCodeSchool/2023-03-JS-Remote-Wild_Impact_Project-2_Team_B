@@ -5,16 +5,21 @@ function SelectItems() {
   const [heroes, setHeroes] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/heroes")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/heroes`)
       .then((data) => data.json())
       .then((data) => setHeroes(data));
   }, []);
 
   return (
     <div className="select-Container">
-      <h1 className="select-Title">Nos best of super-heroes</h1>
+      <h1 className="select-Title">OUR best of super heroes</h1>
       <div className="select-Catalogue">
-        {heroes.slice(0, 8).map((Heroe) => (
+        {heroes.slice(0, 4).map((Heroe) => (
+          <CatalogueCardXL key={Heroe.id} Heroe={Heroe} />
+        ))}
+      </div>
+      <div className="select-Catalogue">
+        {heroes.slice(5, 9).map((Heroe) => (
           <CatalogueCardXL key={Heroe.id} Heroe={Heroe} />
         ))}
       </div>
