@@ -25,11 +25,6 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/cart" className="menu-item">
-                Shopping Cart
-              </Link>
-            </li>
-            <li>
               <Link to="/contact" className="menu-item">
                 Contact
               </Link>
