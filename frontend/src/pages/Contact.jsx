@@ -22,13 +22,13 @@ function Contact() {
     const err = {};
     const regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
     if (formData.user_firstName === "") {
-      err.user_firstName = "Il manque votre prenom!";
+      err.user_firstName = "Your first name is missing!";
     }
     if (formData.user_lastName === "") {
-      err.user_lastName = "Il manque votre nom!";
+      err.user_lastName = "Your name is missing!";
     }
     if (!regex.test(formData.user_email)) {
-      err.user_email = "Pas de message sans votre email!";
+      err.user_email = "No message without your e-mail!";
     }
     setFormError({ ...err });
     return Object.keys(err).length < 1;
@@ -49,19 +49,17 @@ function Contact() {
         .then(() => {
           // eslint-disable-next-line no-alert
           alert(
-            "Merci pour le message ! Les Superheros sont à votre disoposition !"
+            "Thanks for the message! The Superheroes are at your disposal !"
           );
         })
 
         .catch(() => {
           // eslint-disable-next-line no-alert
-          alert("Il y a un problème...");
+          alert("There is a problem...");
         });
     } else {
       // eslint-disable-next-line no-alert
-      alert(
-        "Vous avez besoin des superpower pour remplir le forumulaire ? Essayez encore une fois!"
-      );
+      alert("Need the superpower to fill the forumular? Try again!");
     }
   };
   /* FORM HTML */
@@ -87,10 +85,10 @@ function Contact() {
             </div>
           </div>
         </div>
-        <h1 className="contactTitle">Contactez nous</h1>
+        <h1 className="contactTitle">Contact us</h1>
         <form className="ContactForm" ref={form} onSubmit={sendEmail}>
           <label className="LabelForm">
-            Prénom
+            First name
             <input
               name="user_firstName"
               type="text"
@@ -103,7 +101,7 @@ function Contact() {
           </label>
           <span className="non-valid">{formError.user_firstName}</span>
           <label className="LabelForm">
-            Nom
+            Name
             <input
               name="user_lastName"
               type="text"
@@ -116,7 +114,7 @@ function Contact() {
           </label>
           <span className="non-valid">{formError.user_lastName}</span>
           <label className="LabelForm">
-            Adresse mail
+            e-mail address
             <input
               name="user_email"
               type="text"
@@ -142,7 +140,7 @@ function Contact() {
           <span className="non-valid">{formError.user_message}</span>
           <br />
           <button type="submit" className="submit" value="Send Email">
-            Envoyer
+            Send
           </button>
         </form>
       </div>
