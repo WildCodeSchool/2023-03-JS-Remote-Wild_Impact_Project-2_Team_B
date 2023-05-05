@@ -801,7 +801,7 @@ button.footer-button:hover {
   @include mainTitle;
   display: block;
   margin-top: 0px;
-  text-align: left
+  text-align: left;
 }
 
 .logo {
@@ -1497,21 +1497,21 @@ button.submit:hover {
 }
 
 // ---------------- === PANIER === ----------------
-.Panier-container{
+.Panier-container {
   margin-top: 40%;
 }
 
 .Panier-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   max-width: 65%;
   flex-direction: column;
   align-items: stretch;
   align-content: stretch;
-  left: 20%;
   position: relative;
   margin-top: 5%;
+  left: 12%;
 }
 
 .Panier-icon {
@@ -1523,18 +1523,19 @@ button.submit:hover {
 
 .Panier-card {
   margin: 13px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   height: 150px;
   border-radius: 20px;
-  background-color: $background-grey;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  font-size: 1.4rem;
+  text-align: center;
 }
 
 .Panier-card img {
-  height: 120px;
-  width: 90px;
+  height: 130px;
+  width: 100px;
   border-radius: 10px;
 }
 
@@ -1562,6 +1563,7 @@ button.submit:hover {
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
+  text-align: center;
 }
 
 .Panier-btn-checkout {
@@ -1590,11 +1592,14 @@ button.submit:hover {
 
 .Panier-reduc {
   border-bottom: 1px solid $background-light-grey;
+  display: flex;
+  flex-direction: column;
 }
 
 .Panier-reduc input {
   height: 25px;
   width: 200px;
+  text-align: center;
 }
 
 .Panier-reduc button {
@@ -1607,9 +1612,8 @@ button.submit:hover {
   text-align: center;
 }
 
-
 @media only screen and (min-width: 768px) {
-  .Panier-container{
+  .Panier-container {
     margin-top: 100px;
   }
 
