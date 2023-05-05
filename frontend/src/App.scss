@@ -801,7 +801,7 @@ button.footer-button:hover {
   @include mainTitle;
   display: block;
   margin-top: 0px;
-  text-align: left;
+  text-align: center;
 }
 
 .logo {
@@ -1499,13 +1499,11 @@ button.submit:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 65%;
   flex-direction: column;
   align-items: stretch;
   align-content: stretch;
   position: relative;
-  margin-top: 5%;
-  left: 12%;
+  margin-top: 10%;
 }
 
 .Panier-icon {
@@ -1612,7 +1610,8 @@ button.submit:hover {
   }
 
   .Panier-card {
-    width: 55%;
+    width: 65%;
+    margin-left: 10%;
   }
 
   .Panier-total {
@@ -1646,5 +1645,14 @@ button.submit:hover {
 
   .Panier-reduc h3 {
     margin-top: 20px;
+  }
+  .contactTitle{
+    text-align: left;
+    margin-left: 10%;
+  }
+
+  .Panier-container {
+    max-width: 65%;
+    left: 12%;
   }
 }
