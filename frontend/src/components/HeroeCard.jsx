@@ -1,42 +1,168 @@
 import React from "react";
 
-function HeroeCard({ Heroes }) {
+function HeroeCard({ heroe, togglePanier, panier }) {
   return (
     <div className="containerCard">
       <div className="imgSection">
-        <img src={Heroes[0].image_md} alt="" />
+        <img src={heroe.image_md} alt="" />
       </div>
       <section className="infoSection">
         <section className="descSection">
-          <h2 className="descElement">{Heroes[0].name}</h2>
+          <h2 className="descElement">{heroe.name}</h2>
           <h3 className="descElement">
-            {Heroes[0].gender} - {Heroes[0].race}
+            {heroe.gender} - {heroe.race}
           </h3>
           <p className="descElement">
-            {Heroes[0].fullName} | Born in {Heroes[0].placeOfBirth}
+            {heroe.fullName} | Born in {heroe.placeOfBirth}
           </p>
           <h3 className="descElement">Caracteristics</h3>
           <p className="descElement">
-            {Heroes[0].eyeColor} eyes & {Heroes[0].hairColor}
+            {heroe.eyeColor} eyes & {heroe.hairColor}
           </p>
           <p className="descElement">
-            First appeared in {Heroes[0].firstAppearance}
+            First appeared in {heroe.firstAppearance}
           </p>
-          <p className="descElement">Work as {Heroes[0].work}</p>
+          <p className="descElement">Work as {heroe.work}</p>
         </section>
         <section className="statSection">
           <h3>Statistics</h3>
-          <ul>
-            <li>Intelligence : {Heroes[0].intelligence} </li>
-            <li>Strength : {Heroes[0].strength}</li>
-            <li>Speed : {Heroes[0].speed}</li>
-            <li>Durability : {Heroes[0].durability}</li>
-            <li>Power : {Heroes[0].power}</li>
-            <li>Combat : {Heroes[0].combat}</li>
-          </ul>
+          <div className="single-stats">
+            <div className="single-chart">
+              <svg viewBox="0 0 36 36" className="circular-chart orange">
+                <path
+                  className="circle-bg"
+                  d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  className="circle"
+                  strokeDasharray={heroe.intelligence}
+                  d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <text x="18" y="20.35" className="percentage">
+                  {heroe.intelligence}
+                </text>
+              </svg>
+              <p className="stat-text">Intelligence</p>
+            </div>
+            <div className="single-chart">
+              <svg viewBox="0 0 36 36" className="circular-chart green">
+                <path
+                  className="circle-bg"
+                  d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  className="circle"
+                  strokeDasharray={heroe.strength}
+                  d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <text x="18" y="20.35" className="percentage">
+                  {heroe.strength}
+                </text>
+              </svg>
+              <p className="stat-text">Strength</p>
+            </div>
+            <div className="single-chart">
+              <svg viewBox="0 0 36 36" className="circular-chart blue">
+                <path
+                  className="circle-bg"
+                  d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  className="circle"
+                  strokeDasharray={heroe.speed}
+                  d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <text x="18" y="20.35" className="percentage">
+                  {heroe.speed}
+                </text>
+              </svg>
+              <p className="stat-text">Speed</p>
+            </div>
+          </div>
+          <div className="single-stats">
+            <div className="single-chart">
+              <svg viewBox="0 0 36 36" className="circular-chart orange">
+                <path
+                  className="circle-bg"
+                  d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  className="circle"
+                  strokeDasharray={heroe.durability}
+                  d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <text x="18" y="20.35" className="percentage">
+                  {heroe.durability}
+                </text>
+              </svg>
+              <p className="stat-text">Durability</p>
+            </div>
+            <div className="single-chart">
+              <svg viewBox="0 0 36 36" className="circular-chart green">
+                <path
+                  className="circle-bg"
+                  d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  className="circle"
+                  strokeDasharray={heroe.power}
+                  d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <text x="18" y="20.35" className="percentage">
+                  {heroe.power}
+                </text>
+              </svg>
+              <p className="stat-text">Intelligence</p>
+            </div>
+            <div className="single-chart">
+              <svg viewBox="0 0 36 36" className="circular-chart blue">
+                <path
+                  className="circle-bg"
+                  d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  className="circle"
+                  strokeDasharray={heroe.combat}
+                  d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <text x="18" y="20.35" className="percentage">
+                  {heroe.combat}
+                </text>
+              </svg>
+              <p className="stat-text">Combat</p>
+            </div>
+          </div>
         </section>
         <section className="buttonSection">
-          <button type="button">Louer mon super héros</button>
+          <button type="button" onClick={togglePanier}>
+            {panier.some((item) => item.id === heroe.id)
+              ? "Retirer du panier"
+              : "Louer mon super héros"}
+          </button>
         </section>
       </section>
     </div>

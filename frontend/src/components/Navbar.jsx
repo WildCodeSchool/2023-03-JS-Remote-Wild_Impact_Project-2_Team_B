@@ -8,23 +8,29 @@ function Navbar() {
         <h1 className="menu-logo">narvel</h1>
       </div>
       <nav className="nav-container">
-        <ul>
-          <li className="menu-item">
-            <Link to="/" className="menu-item">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/catalogue" className="menu-item">
-              Catalogue
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="menu-item">
-              Contact
-            </Link>
-          </li>
-        </ul>
+        <div className="menuToggle">
+          <input type="checkbox" className="menu-input" />
+          <span />
+          <span />
+          <span />
+          <ul className="menu">
+            <li className="menu-item">
+              <Link to="/" className="menu-item">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/heroes" className=" menu-item">
+                Super heroes
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="menu-item">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   );

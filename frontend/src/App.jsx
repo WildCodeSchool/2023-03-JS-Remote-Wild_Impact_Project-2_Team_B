@@ -1,43 +1,41 @@
 // US 1 import
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
 
-// US 2 Import
+import PanierIcon from "./components/PanierIcon";
+import Homepage from "./pages/Homepage";
 import Catalogue from "./pages/Catalogue";
 import Panier from "./pages/Panier";
-// US 3 import
-import HeroeCard from "./components/HeroeCard";
-import { Heroes } from "./assets/data";
-// US 4 import
-
-import Footer from "./pages/Footer";
-
+import HeroePage from "./pages/HeroePage";
 import Contact from "./pages/Contact";
+
+import Navbar from "./components/Navbar";
+import Footer from "./pages/Footer";
 
 import "./App.scss";
 
 function App() {
+  const [panier, setPanier] = useState([]);
   return (
     <div className="App">
       <Router>
+        <PanierIcon />
         <Navbar />
         <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/heroes" element={<Catalogue />} />
           <Route
             path="/heroes/:heroenumber"
-            element={<HeroeCard Heroes={Heroes} />}
+            element={<HeroePage setPanier={setPanier} panier={panier} />}
+          />
+          <Route
+            path="/cart"
+            element={<Panier panier={panier} setPanier={setPanier} />}
           />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
-      {/** US 1 Page */}
 
-      {/** US 2 Page */}
-      <Catalogue />
-      <Panier />
-      {/** US 3 Page */}
-
-      {/** US 4 Page */}
       <Footer />
     </div>
   );
