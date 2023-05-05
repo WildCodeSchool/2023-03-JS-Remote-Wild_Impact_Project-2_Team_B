@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import CatalogCard from "../components/CatalogCard";
+import CatalogueCard from "../components/CatalogueCard";
 
-function Catalog() {
+function Catalogue() {
   const [Heroes, setHeroes] = useState([]);
 
   useEffect(() => {
@@ -13,13 +13,13 @@ function Catalog() {
 
   return (
     <div>
-      <div className="Catalog-main">
+      <div className="Catalogue-main">
         {Heroes.map((Heroe) => (
-          <CatalogCard key={Heroe.id} Heroe={Heroe} />
+          <CatalogueCard key={Heroe.id} Heroe={Heroe} />
         ))}
       </div>
     </div>
   );
 }
 
-export default Catalog;
+export default Catalogue;
