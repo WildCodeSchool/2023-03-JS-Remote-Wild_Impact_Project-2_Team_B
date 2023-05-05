@@ -1,6 +1,6 @@
 import React from "react";
 
-function HeroeCard({ heroe, setPanier, panier }) {
+function HeroeCard({ heroe, togglePanier, panier }) {
   return (
     <div className="containerCard">
       <div className="imgSection">
@@ -36,16 +36,7 @@ function HeroeCard({ heroe, setPanier, panier }) {
           </ul>
         </section>
         <section className="buttonSection">
-          <button
-            type="button"
-            onClick={() =>
-              panier.some((item) => item.id === heroe.id)
-                ? setPanier((prevState) =>
-                    prevState.filter((item) => item.id !== heroe.id)
-                  )
-                : setPanier((prevState) => [...prevState, heroe])
-            }
-          >
+          <button type="button" onClick={togglePanier}>
             {panier.some((item) => item.id === heroe.id)
               ? "Retirer du panier"
               : "Louer mon super héros"}

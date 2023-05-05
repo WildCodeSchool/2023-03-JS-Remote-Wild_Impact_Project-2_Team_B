@@ -13,11 +13,21 @@ function HeroePage({ setPanier, panier }) {
       .catch((err) => console.error(err));
   }, []);
 
+  const togglePanier = () => {
+    if (panier.some((item) => item.id === heroe.id)) {
+      setPanier((prevState) =>
+        prevState.filter((item) => item.id !== heroe.id)
+      );
+    } else {
+      setPanier((prevState) => [...prevState, heroe]);
+    }
+  };
+
   return (
     <div>
       {" "}
       {heroe && (
-        <HeroeCard heroe={heroe} setPanier={setPanier} panier={panier} />
+        <HeroeCard heroe={heroe} togglePanier={togglePanier} panier={panier} />
       )}
     </div>
   );
