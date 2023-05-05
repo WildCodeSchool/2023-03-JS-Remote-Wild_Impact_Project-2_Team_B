@@ -1412,14 +1412,8 @@ button.submit:hover {
 
 .Catalogue-main {
   display: flex;
-  gap: 2rem;
   flex-wrap: wrap;
-  justify-content: space-around;
-  max-width: 80%;
-  margin: 0;
-  margin-left: 25%;
-  margin-right: 10%;
-  margin-top: 5%;
+  margin-top: 40% !important;
 }
 
 .Catalogue-link {
