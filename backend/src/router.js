@@ -21,7 +21,6 @@ router.get("/heroes", (req, res) => {
   connection
     .query("SELECT * FROM heroe")
     .then(([result]) => {
-      // donne moi le premier élément du tableau et appelle le result
       res.status(200).json(result);
     })
     .catch((err) => {
@@ -32,9 +31,13 @@ router.get("/heroes", (req, res) => {
 router.get("/heroes/:id", (req, res) => {
   const id = parseInt(req.params.id, 10);
   connection
-    .query(`SELECT * FROM heroe WHERE id = ${id}`)
+    .query(`SELECT * FROM heroe WHERE id = ?`, [id])
     .then(([result]) => {
-      res.status(200).json(result[0]);
+      if (result[0] != null) {
+        res.json(result[0]);
+      } else {
+        res.status(404).send("Not Found");
+      }
     })
     .catch((err) => {
       res.status(500).send(err);
