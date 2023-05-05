@@ -21,7 +21,7 @@ function Navbar() {
             </li>
             <li>
               <Link to="/heroes" className=" menu-item">
-                Our super heroes
+                Super heroes
               </Link>
             </li>
             <li>

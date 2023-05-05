@@ -56,14 +56,14 @@ $base-font-family: "Lato", sans-serif;
 
 @mixin navBtnHover($color-hover) {
   color: $color-hover;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.1rem;
   transition: all 0.3s ease;
   border-bottom: 2px dashed;
   border-color: $color-hover;
   line-height: 1;
   padding-bottom: 0.4rem;
+  padding-right: 0;
   cursor: url(https://ani.cursors-4u.net/comics/mic-1/mic14.cur), auto !important;
-
 }
 
 @mixin logo($font-size) {
