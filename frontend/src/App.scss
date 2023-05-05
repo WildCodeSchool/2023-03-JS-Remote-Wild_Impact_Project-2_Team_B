@@ -801,6 +801,7 @@ button.footer-button:hover {
   @include mainTitle;
   display: block;
   margin-top: 0px;
+  text-align: left
 }
 
 .logo {
@@ -1610,7 +1611,6 @@ button.submit:hover {
 @media only screen and (min-width: 768px) {
   .Panier-container{
     margin-top: 100px;
-    margin-left: 18%;
   }
 
   .Panier-card {
@@ -1620,7 +1620,7 @@ button.submit:hover {
   .Panier-total {
     width: 30%;
     position: fixed;
-    top: 100px;
+    top: 190px;
     right: 20px;
     height: 350px;
   }
