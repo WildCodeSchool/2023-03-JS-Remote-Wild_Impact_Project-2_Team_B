@@ -1,5 +1,5 @@
 // US 1 import
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import PanierIcon from "./components/PanierIcon";
@@ -15,6 +15,7 @@ import Footer from "./pages/Footer";
 import "./App.scss";
 
 function App() {
+  const [panier, setPanier] = useState([]);
   return (
     <div className="App">
       <Router>
@@ -23,8 +24,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/heroes" element={<Catalogue />} />
-          <Route path="/heroes/:heroenumber" element={<HeroePage />} />
-          <Route path="/cart" element={<Panier />} />
+          <Route
+            path="/heroes/:heroenumber"
+            element={<HeroePage setPanier={setPanier} panier={panier} />}
+          />
+          <Route
+            path="/cart"
+            element={<Panier panier={panier} setPanier={setPanier} />}
+          />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>

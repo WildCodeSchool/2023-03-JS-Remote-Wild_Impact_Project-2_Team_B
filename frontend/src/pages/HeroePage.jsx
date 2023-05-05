@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import HeroeCard from "../components/HeroeCard";
 
-function HeroePage() {
+function HeroePage({ setPanier, panier }) {
   const params = useParams();
-
   const [heroe, setHeroe] = useState();
 
   useEffect(() => {
@@ -14,7 +13,24 @@ function HeroePage() {
       .catch((err) => console.error(err));
   }, []);
 
-  return <div> {heroe && <HeroeCard heroe={heroe} />}</div>;
+  const togglePanier = () => {
+    if (panier.some((item) => item.id === heroe.id)) {
+      setPanier((prevState) =>
+        prevState.filter((item) => item.id !== heroe.id)
+      );
+    } else {
+      setPanier((prevState) => [...prevState, heroe]);
+    }
+  };
+
+  return (
+    <div>
+      {" "}
+      {heroe && (
+        <HeroeCard heroe={heroe} togglePanier={togglePanier} panier={panier} />
+      )}
+    </div>
+  );
 }
 
 export default HeroePage;

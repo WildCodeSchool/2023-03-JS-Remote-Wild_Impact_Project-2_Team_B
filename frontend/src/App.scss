@@ -1496,10 +1496,8 @@ button.submit:hover {
 }
 
 // ---------------- === PANIER === ----------------
-.logo {
-  @include logo(70px);
-  margin: 30px;
-  text-align: center;
+.Panier-container{
+  margin-top: 40%;
 }
 
 .Panier-container {
@@ -1608,16 +1606,22 @@ button.submit:hover {
   text-align: center;
 }
 
-@media only screen and (max-width: 768px) {
+
+@media only screen and (min-width: 768px) {
+  .Panier-container{
+    margin-top: 100px;
+    margin-left: 18%;
+  }
+
   .Panier-card {
-    width: 65%;
+    width: 55%;
   }
 
   .Panier-total {
     width: 30%;
     position: fixed;
-    top: 120px;
-    right: 0px;
+    top: 100px;
+    right: 20px;
     height: 350px;
   }
 
